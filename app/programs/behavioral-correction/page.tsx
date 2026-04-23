@@ -5,7 +5,7 @@ import CheckoutButton from "@/components/CheckoutButton";
 export const metadata: Metadata = {
   title: "Behavioral Correction Program",
   description:
-    "Understand and correct reactive, aggressive, or anxious dog behavior at the root. Austin-based dog training for real results.",
+    "Understand and correct reactive, aggressive, or anxious dog behavior at the root. Expert dog training for real results — in Austin and online.",
   alternates: {
     canonical:
       "https://www.serafimdogtraining.com/programs/behavioral-correction",
@@ -76,7 +76,9 @@ export default function BehavioralCorrectionPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/book-a-consult"
+              href="https://calendly.com/arthur-serafimdogtraining/15min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
             >
               Book a Free Consult
@@ -147,22 +149,50 @@ export default function BehavioralCorrectionPage() {
               {/* Pricing */}
               <div className="bg-forest text-white rounded-sm p-8">
                 <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-4">
-                  Investment
+                  Pricing
                 </p>
                 <p className="font-display text-4xl text-white font-medium mb-2">
                   $997
                 </p>
+                <p className="text-white/50 text-sm font-light mb-2">Payment plans available</p>
                 <p className="text-white/60 font-light text-sm mb-8">
                   Includes initial assessment, customized protocol, and
                   follow-up sessions. No hidden fees.
                 </p>
                 <Link
-                  href="/book-a-consult"
+                  href="https://calendly.com/arthur-serafimdogtraining/15min"
+              target="_blank"
+              rel="noopener noreferrer"
                   className="block text-sm tracking-wide px-6 py-3 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold rounded-sm"
                 >
                   Book a Free Consult
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guarantee */}
+      <section className="bg-white py-14 md:py-16 border-t border-offwhite-soft">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="flex gap-5 items-start">
+            <div className="shrink-0 mt-0.5">
+              <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-2">
+                7-Day Money-Back Guarantee
+              </p>
+              <p className="text-charcoal-light font-light leading-relaxed text-sm">
+                If you&apos;re not satisfied within 7 days of your first session, I&apos;ll refund you in full. Refund requests must be submitted in writing to{" "}
+                <a href="mailto:hello@serafimdogtraining.com" className="text-forest hover:text-gold transition-colors underline underline-offset-2">
+                  hello@serafimdogtraining.com
+                </a>{" "}
+                and include your full name, the date of your first session, and your reason for requesting a refund.
+              </p>
             </div>
           </div>
         </div>
@@ -213,11 +243,13 @@ export default function BehavioralCorrectionPage() {
             <em className="italic font-light">Let&apos;s prove it.</em>
           </h2>
           <p className="text-charcoal-light font-light text-lg mb-10 max-w-md mx-auto">
-            Start with a free consult. We&apos;ll assess your dog and give you
-            an honest picture of what&apos;s possible.
+            Book a free consult. We&apos;ll talk through your dog and give
+            you an honest picture of what&apos;s possible.
           </p>
           <Link
-            href="/book-a-consult"
+            href="https://calendly.com/arthur-serafimdogtraining/15min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-sm tracking-wide px-9 py-4 bg-forest text-white hover:bg-forest-light transition-colors duration-200 font-semibold"
           >
             Book a Free Consult

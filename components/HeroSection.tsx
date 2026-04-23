@@ -1,40 +1,21 @@
-"use client";
-
-import { useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted((v) => !v);
-    }
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video background — drop /public/videos/hero.mp4 to enable */}
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
+    <section className="relative flex items-center overflow-hidden" style={{ aspectRatio: '4/3' }}>
+      {/* Background image */}
+      <Image
+        src="/images/hero-mountain.jpg"
+        alt=""
+        fill
+        className="object-cover object-[center_80%]"
+        priority
         aria-hidden="true"
-        poster="/images/hero-poster.jpg"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+      />
 
-      {/* Fallback gradient (visible when no video loads) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-forest-dark via-forest to-forest-muted" />
-
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Gradient overlay — keeps text legible while letting the photo breathe */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/25" />
 
       {/* Subtle grain/texture layer */}
       <div
@@ -45,76 +26,45 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Unmute / mute button */}
-      <button
-        onClick={toggleMute}
-        className="absolute top-28 right-6 z-20 bg-white/15 backdrop-blur-sm text-white p-2.5 rounded-full hover:bg-white/25 transition-all duration-200 border border-white/20"
-        aria-label={isMuted ? "Unmute video" : "Mute video"}
-      >
-        {isMuted ? (
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.75}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
-            />
-          </svg>
-        ) : (
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.75}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.536 8.464a5 5 0 010 7.072M12 6.253v13.494m0 0l-3-3m3 3l3-3M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5"
-            />
-          </svg>
-        )}
-      </button>
-
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 pt-44 w-full">
         <div className="max-w-2xl">
           <p className="text-gold text-xs uppercase tracking-[0.3em] font-medium mb-7">
-            Austin, Texas · Dog Training
+            In-Person in Austin · Online Everywhere
           </p>
           <h1 className="font-display text-5xl md:text-[3.75rem] lg:text-7xl text-white font-medium leading-[1.05] mb-6 tracking-tight">
-            Your Dog Has Potential.{" "}
-            <em className="italic font-light">Let&apos;s Unlock It.</em>
+            Let&apos;s Unlock{" "}
+            <em className="italic font-light">Your Dog&apos;s Potential.</em>
           </h1>
           <p className="text-lg md:text-xl text-white/75 font-light leading-relaxed max-w-lg mb-10">
-            Austin&apos;s most trusted dog trainer — working dogs, service dogs,
-            and behavioral rehabilitation.
+            Expert dog training — in person in Austin, online everywhere.
+            Working dogs, service dogs, and behavioral rehabilitation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-5">
             <Link
               href="/#programs"
               className="inline-block text-sm tracking-wide px-7 py-3.5 border border-white/70 text-white hover:bg-white/10 hover:border-white transition-all duration-200 text-center font-medium"
             >
               View Programs
             </Link>
-            <Link
-              href="/book-a-consult"
+            <a
+              href="https://calendly.com/arthur-serafimdogtraining/15min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold"
             >
               Book a Free Consult
-            </Link>
+            </a>
           </div>
+          <p className="text-white/45 text-sm font-light">
+            Or start free —{" "}
+            <Link
+              href="/community"
+              className="text-white/65 hover:text-gold underline underline-offset-4 decoration-white/30 hover:decoration-gold transition-colors duration-200"
+            >
+              join the community →
+            </Link>
+          </p>
         </div>
       </div>
 

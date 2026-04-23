@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: "Service Dog Program",
   description:
-    "Transform your dog into a certified service or therapy animal. Custom training plan for public access, task work, and real-world scenarios. Austin, TX.",
+    "Build a task-trained service or therapy dog. Custom training plan for public access, task work, and real-world scenarios — in Austin and online.",
   alternates: {
     canonical: "https://www.serafimdogtraining.com/programs/service-dog",
   },
   openGraph: {
     title: "Service Dog Program — Serafim Dog Training",
     description:
-      "Certified service and therapy dog training in Austin, TX. Public access, task work, hospital visits.",
+      "Service and therapy dog training — in person in Austin, online everywhere. Real task training, public access, and handler education.",
     url: "https://www.serafimdogtraining.com/programs/service-dog",
   },
 };
@@ -23,14 +24,14 @@ const whatIsIncluded = [
   "Public access training (stores, hospitals, transit, restaurants)",
   "Distraction proofing in real-world environments",
   "Handler education — you learn alongside your dog",
-  "Therapy dog certification preparation (if applicable)",
+  "Therapy dog evaluation prep (if applicable)",
   "Hospital and facility visit preparation",
-  "Ongoing support during certification process",
+  "Ongoing support throughout the training process",
 ];
 
 const whoItsFor = [
   "Individuals with physical, psychiatric, or medical disabilities",
-  "Caregivers seeking a certified therapy dog for a loved one",
+  "Caregivers seeking a therapy dog for a loved one",
   "Families needing a facility therapy dog for hospital visits",
   "Anyone who has been told their dog \"has potential\" but needs direction",
 ];
@@ -42,15 +43,15 @@ const faqs = [
   },
   {
     q: "How long does the program take?",
-    a: "Typically 3–6 months depending on the dog's starting point, the tasks required, and how consistently the handler trains between sessions.",
+    a: "Every dog is different. Timeline depends on the dog's age, breed, starting point, the tasks being trained, and how consistently the handler works between sessions. There's no fixed answer — this is something we'll go over on your call.",
   },
   {
-    q: "Will my dog be fully certified at the end?",
-    a: "We prepare your dog for certification. The certification body (AKC, APDT, ATTS, or your employer/facility's preferred standard) is a separate step we guide you through.",
+    q: "Will my dog have official 'certification' at the end?",
+    a: "Under the ADA, service dogs don't require any certification or registration — what matters is that the dog is reliably task trained. We'll help you navigate any documentation your employer or specific facility requires, but there's no legal 'certification' for service dogs.",
   },
   {
     q: "Do I need to be present for training sessions?",
-    a: "Yes — handler education is non-negotiable. You are part of the program. A service dog that only works for Arthur is not a service dog for you.",
+    a: "Yes — handler education is non-negotiable. You are part of the program. A service dog that only works for me is not a service dog for you.",
   },
 ];
 
@@ -67,26 +68,34 @@ export default function ServiceDogPage() {
             Service Dog Program
           </h1>
           <p className="text-white/70 font-light text-lg max-w-xl leading-relaxed mb-10">
-            Transform your dog into a certified service or therapy animal with a
-            structured, real-world training plan built around your specific
-            needs.
+            Build a task-trained service or therapy dog with a structured,
+            real-world training plan built around your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/book-a-consult"
+              href="https://calendly.com/arthur-serafimdogtraining/15min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
             >
               Book a Free Consult
             </Link>
-            <CheckoutButton
-              program="service-dog"
-              label="Enroll — Starting at $1,499"
-              className="text-sm tracking-wide px-7 py-3.5 border border-white/60 text-white hover:bg-white/10 transition-all duration-200 font-medium cursor-pointer"
+          </div>
+        </div>
+      </section>
+
+      {/* Hero Image */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-6 pt-12 pb-0">
+          <div className="relative w-full rounded-sm overflow-hidden" style={{ aspectRatio: '4/3' }}>
+            <Image
+              src="/images/korra-travel.jpg"
+              alt="Korra in public access training"
+              fill
+              className="object-cover object-[center_60%]"
+              priority
             />
           </div>
-          <p className="text-white/40 text-xs mt-5 font-light">
-            Not sure yet? Start with a free consultation — no obligation.
-          </p>
         </div>
       </section>
 
@@ -99,7 +108,7 @@ export default function ServiceDogPage() {
                 What&apos;s Included
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-forest font-medium leading-tight mb-8">
-                Everything your dog needs to become certified.
+                Everything your dog needs to be fully trained.
               </h2>
               <ul className="space-y-4">
                 {whatIsIncluded.map((item) => (
@@ -147,22 +156,49 @@ export default function ServiceDogPage() {
               {/* Pricing */}
               <div className="bg-forest text-white rounded-sm p-8">
                 <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-4">
-                  Investment
+                  Pricing
                 </p>
-                <p className="font-display text-4xl text-white font-medium mb-2">
-                  Starting at $1,499
+                <p className="font-display text-2xl text-white font-medium mb-3">
+                  Pricing discussed on your call
                 </p>
                 <p className="text-white/60 font-light text-sm mb-8">
-                  Final pricing depends on your dog&apos;s starting point and
-                  training goals. Discussed at consultation.
+                  Every dog is different. Pricing depends on your dog&apos;s
+                  starting point, the tasks required, and your timeline.
                 </p>
                 <Link
-                  href="/book-a-consult"
+                  href="https://calendly.com/arthur-serafimdogtraining/15min"
+              target="_blank"
+              rel="noopener noreferrer"
                   className="block text-sm tracking-wide px-6 py-3 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold rounded-sm"
                 >
                   Book a Free Consult
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guarantee */}
+      <section className="bg-offwhite py-14 md:py-16 border-t border-offwhite-soft">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="flex gap-5 items-start">
+            <div className="shrink-0 mt-0.5">
+              <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-2">
+                7-Day Money-Back Guarantee
+              </p>
+              <p className="text-charcoal-light font-light leading-relaxed text-sm">
+                If you&apos;re not satisfied within 7 days of your first session, I&apos;ll refund you in full. Refund requests must be submitted in writing to{" "}
+                <a href="mailto:hello@serafimdogtraining.com" className="text-forest hover:text-gold transition-colors underline underline-offset-2">
+                  hello@serafimdogtraining.com
+                </a>{" "}
+                and include your full name, the date of your first session, and your reason for requesting a refund.
+              </p>
             </div>
           </div>
         </div>
@@ -199,11 +235,13 @@ export default function ServiceDogPage() {
             Ready to start the process?
           </h2>
           <p className="text-white/60 font-light text-lg mb-10 max-w-md mx-auto">
-            Book a free consultation and we&apos;ll figure out if this program
+            Book a free consult and we&apos;ll figure out if this program
             is the right fit for your dog.
           </p>
           <Link
-            href="/book-a-consult"
+            href="https://calendly.com/arthur-serafimdogtraining/15min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-sm tracking-wide px-9 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
           >
             Book a Free Consult

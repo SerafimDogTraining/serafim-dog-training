@@ -3,21 +3,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Book a Free Consult",
   description:
-    "Schedule your free dog training consultation with Arthur Serafim. 20 minutes, no obligation — just an honest conversation about your dog.",
+    "Schedule a free 15-minute call with Arthur Serafim. No obligation — just an honest conversation about your dog and what's possible.",
   alternates: {
     canonical: "https://www.serafimdogtraining.com/book-a-consult",
   },
   openGraph: {
     title: "Book a Free Consult — Serafim Dog Training",
     description:
-      "Schedule your free consultation with Arthur Serafim. Austin, TX.",
+      "Schedule a free 15-min call with Arthur Serafim — in person in Austin or online.",
     url: "https://www.serafimdogtraining.com/book-a-consult",
   },
 };
 
 const CALENDLY_URL =
   process.env.NEXT_PUBLIC_CALENDLY_URL ??
-  "https://calendly.com/serafimdogtraining/consult";
+  "https://calendly.com/arthur-serafimdogtraining/15min";
 
 export default function BookAConsultPage() {
   return (
@@ -26,13 +26,13 @@ export default function BookAConsultPage() {
       <section className="bg-forest pt-40 pb-16">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
-            Free Consultation
+            Free 15-Min Call
           </p>
           <h1 className="font-display text-5xl md:text-6xl text-white font-medium leading-tight max-w-2xl mb-6">
             Let&apos;s talk about your dog.
           </h1>
           <p className="text-white/70 font-light text-lg max-w-xl leading-relaxed">
-            20 minutes. Free. No sales pitch. You tell us about your dog,
+            15 minutes. Free. No sales pitch. You tell us about your dog,
             we&apos;ll tell you honestly whether we&apos;re the right fit and
             what the path forward looks like.
           </p>
@@ -52,7 +52,7 @@ export default function BookAConsultPage() {
               {
                 step: "02",
                 title: "Get an honest assessment",
-                body: "Arthur will give you a straight answer on whether your dog is a fit for our programs, and which one makes the most sense.",
+                body: "I'll give you a straight answer on whether your dog is a fit for our programs, and which one makes the most sense.",
               },
               {
                 step: "03",
@@ -101,7 +101,7 @@ export default function BookAConsultPage() {
               width="100%"
               height="700"
               frameBorder="0"
-              title="Schedule a free consultation"
+              title="Schedule a free 15-min call"
               className="w-full"
             />
           </div>

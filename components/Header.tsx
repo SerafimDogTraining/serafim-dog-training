@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const programs = [
@@ -20,6 +21,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [logoError, setLogoError] = useState(false);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -57,23 +59,37 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-0 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-none group">
-          <span
-            className={`font-display text-xl font-semibold tracking-wide transition-colors duration-200 group-hover:text-gold ${
-              scrolled || !isHeroPage ? "text-forest" : "text-white"
-            }`}
-          >
-            Serafim Dog Training
-          </span>
-          <span
-            className={`text-[9px] font-sans font-medium tracking-[0.22em] uppercase mt-0.5 transition-colors duration-200 ${
-              scrolled || !isHeroPage ? "text-charcoal-muted" : "text-white/60"
-            }`}
-          >
-            Austin, Texas
-          </span>
+        <Link href="/" className="flex items-center leading-none group">
+          {!logoError ? (
+            <Image
+              src={!scrolled && isHeroPage ? "/images/logo-white.png" : "/images/logo.png"}
+              alt="Serafim Dog Training"
+              width={320}
+              height={128}
+              className="object-contain h-[128px] w-auto -my-6"
+              priority
+              onError={() => setLogoError(true)}
+            />
+          ) : (
+            <div className="flex flex-col">
+              <span
+                className={`font-display text-xl font-semibold tracking-wide transition-colors duration-200 group-hover:text-gold ${
+                  scrolled || !isHeroPage ? "text-forest" : "text-white"
+                }`}
+              >
+                Serafim Dog Training
+              </span>
+              <span
+                className={`text-[9px] font-sans font-medium tracking-[0.22em] uppercase mt-0.5 transition-colors duration-200 ${
+                  scrolled || !isHeroPage ? "text-charcoal-muted" : "text-white/60"
+                }`}
+              >
+                In-Person & Online
+              </span>
+            </div>
+          )}
         </Link>
 
         {/* Desktop Nav */}
@@ -121,6 +137,17 @@ export default function Header() {
             )}
           </div>
 
+          <Link
+            href="/programs/service-dog"
+            className={`text-sm font-light tracking-wide transition-colors duration-200 ${
+              scrolled || !isHeroPage
+                ? "text-charcoal hover:text-forest"
+                : "text-white/85 hover:text-white"
+            }`}
+          >
+            Service Dog
+          </Link>
+
           {mainLinks.map((link) => (
             <Link
               key={link.href}
@@ -135,12 +162,14 @@ export default function Header() {
             </Link>
           ))}
 
-          <Link
-            href="/book-a-consult"
+          <a
+            href="https://calendly.com/arthur-serafimdogtraining/15min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm tracking-wide px-5 py-2.5 bg-forest text-white hover:bg-forest-light transition-colors duration-200 rounded-sm font-medium"
           >
-            Book a Consult
-          </Link>
+            Book a Free Consult
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -184,6 +213,12 @@ export default function Header() {
             </Link>
           ))}
           <div className="border-t border-offwhite-soft pt-4 flex flex-col gap-5">
+            <Link
+              href="/programs/service-dog"
+              className="text-sm text-charcoal hover:text-forest transition-colors font-medium"
+            >
+              Service Dog
+            </Link>
             {mainLinks.map((link) => (
               <Link
                 key={link.href}
@@ -193,12 +228,14 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/book-a-consult"
+            <a
+              href="https://calendly.com/arthur-serafimdogtraining/15min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm tracking-wide px-5 py-3 bg-forest text-white hover:bg-forest-light transition-colors text-center rounded-sm font-medium mt-1"
             >
               Book a Free Consult
-            </Link>
+            </a>
           </div>
         </div>
       )}

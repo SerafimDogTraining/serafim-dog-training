@@ -20,11 +20,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.serafimdogtraining.com"),
   title: {
-    default: "Serafim Dog Training — Austin, TX",
+    default: "Serafim Dog Training",
     template: "%s | Serafim Dog Training",
   },
   description:
-    "Austin's most trusted dog trainer. Working dogs, service dogs, and behavioral rehabilitation. Every dog gets a custom plan.",
+    "Expert dog training — in person in Austin, online everywhere. Working dogs, service dogs, and behavioral rehabilitation. Every dog gets a custom plan.",
   openGraph: {
     siteName: "Serafim Dog Training",
     locale: "en_US",

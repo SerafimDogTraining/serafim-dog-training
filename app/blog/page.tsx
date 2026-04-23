@@ -5,7 +5,7 @@ import { getAllPosts, formatDate } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Dog training tips, service dog insights, and behavioral guidance from Austin trainer Arthur Serafim.",
+    "Dog training tips, service dog insights, and behavioral guidance from Arthur Serafim.",
   alternates: { canonical: "https://www.serafimdogtraining.com/blog" },
   openGraph: {
     title: "Blog — Serafim Dog Training",
@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
             Training insights from the field.
           </h1>
           <p className="text-white/70 font-light text-lg max-w-lg leading-relaxed">
-            Real-world guidance on dog training, service animal certification,
+            Real-world guidance on dog training, service dog work,
             handler education, and behavioral rehabilitation.
           </p>
         </div>

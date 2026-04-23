@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div>
               <p className="text-sm font-semibold text-charcoal">Arthur Serafim</p>
               <p className="text-xs text-charcoal-muted font-light">
-                Dog Trainer · Austin, TX
+                Dog Trainer · Austin, TX & Online
               </p>
             </div>
           </div>
@@ -171,15 +171,17 @@ export default async function BlogPostPage({ params }: Props) {
             Ready to take the next step?
           </h2>
           <p className="text-white/60 font-light mb-8">
-            Book a free consultation — we&apos;ll talk about your dog and
+            Book a free consult — we&apos;ll talk about your dog and
             figure out the right path forward.
           </p>
-          <Link
-            href="/book-a-consult"
+          <a
+            href="https://calendly.com/arthur-serafimdogtraining/15min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-sm tracking-wide px-8 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
           >
             Book a Free Consult
-          </Link>
+          </a>
         </div>
       </section>
     </>

@@ -40,7 +40,7 @@ export default function OGImage() {
             marginBottom: 28,
           }}
         >
-          Austin, Texas · Dog Training
+          In-Person · Austin, TX · Online Worldwide
         </div>
 
         {/* Headline */}
