@@ -28,7 +28,7 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 pt-44 w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 pt-28 md:py-32 md:pt-44 w-full">
         <div className="max-w-2xl">
           <p className="text-gold text-xs uppercase tracking-[0.3em] font-medium mb-7">
             In-Person in Austin · Online Everywhere
@@ -42,12 +42,6 @@ export default function HeroSection() {
             Working dogs, service dogs, and behavioral rehabilitation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-5">
-            <Link
-              href="/#programs"
-              className="inline-block text-sm tracking-wide px-7 py-3.5 border border-white/70 text-white hover:bg-white/10 hover:border-white transition-all duration-200 text-center font-medium"
-            >
-              View Programs
-            </Link>
             <a
               href="https://calendly.com/arthur-serafimdogtraining/15min"
               target="_blank"
