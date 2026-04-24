@@ -34,8 +34,8 @@ export default function HeroSection() {
             In-Person in Austin · Online Everywhere
           </p>
           <h1 className="font-display text-4xl md:text-[3.75rem] lg:text-7xl text-white font-medium leading-[1.05] mb-6 tracking-tight">
-            Let&apos;s Unlock{" "}
-            <em className="italic font-light">Your Dog&apos;s Potential.</em>
+            Real-World Reliability{" "}
+            <em className="italic font-light">for All Dogs.</em>
           </h1>
           <p className="text-lg md:text-xl text-white/75 font-light leading-relaxed max-w-lg mb-10">
             Expert dog training — in person in Austin, online everywhere.
@@ -63,10 +63,9 @@ export default function HeroSection() {
           <div className="border-t border-b border-white/20 py-4 mt-8">
             <div className="flex flex-wrap justify-center md:justify-between gap-6 md:gap-0 text-white/90">
               {[
-                { stat: "7M+", label: "Views Across Platforms" },
+                { stat: "10M+", label: "Views Across Platforms" },
                 { stat: "100+", label: "Dogs Trained" },
                 { stat: "24K+", label: "Followers" },
-                { stat: "3", label: "Viral Videos" },
               ].map((item) => (
                 <div key={item.stat} className="text-center">
                   <div className="font-display text-2xl font-semibold">{item.stat}</div>
