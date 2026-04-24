@@ -48,7 +48,7 @@ export default function RefundPolicyPage() {
             {
               title: "1. Refund Eligibility Window",
               content:
-                "You are eligible for a full refund of all fees paid if you request a refund within 7 calendar days of the date on which your first session with Serafim Dog Training is completed. To request a refund, contact us at hello@serafimdogtraining.com with your full name, the date of your first session, and a refund request. Refunds will be processed within 10 business days to the original payment method.",
+                "You are eligible for a full refund of all fees paid if you request a refund within 7 calendar days of the date on which your first session with Serafim Dog Training is completed. To request a refund, contact us at arthur@serafimdogtraining.com with your full name, the date of your first session, and a refund request. Refunds will be processed within 10 business days to the original payment method.",
             },
             {
               title: "2. Non-Refundable Period",
@@ -68,7 +68,7 @@ export default function RefundPolicyPage() {
             {
               title: "5. Contact for Refund Requests",
               content:
-                "All refund requests must be submitted in writing to hello@serafimdogtraining.com. Include your full name, the date of your first session, and your reason for requesting a refund.",
+                "All refund requests must be submitted in writing to arthur@serafimdogtraining.com. Include your full name, the date of your first session, and your reason for requesting a refund.",
             },
           ].map((section) => (
             <div key={section.title}>

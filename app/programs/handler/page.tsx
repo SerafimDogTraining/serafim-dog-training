@@ -244,8 +244,8 @@ export default function HandlerProgramPage() {
               </p>
               <p className="text-charcoal-light font-light leading-relaxed text-sm">
                 If you&apos;re not satisfied within 7 days of your first session, I&apos;ll refund you in full. Refund requests must be submitted in writing to{" "}
-                <a href="mailto:hello@serafimdogtraining.com" className="text-forest hover:text-gold transition-colors underline underline-offset-2">
-                  hello@serafimdogtraining.com
+                <a href="mailto:arthur@serafimdogtraining.com" className="text-forest hover:text-gold transition-colors underline underline-offset-2">
+                  arthur@serafimdogtraining.com
                 </a>{" "}
                 and include your full name, the date of your first session, and your reason for requesting a refund.
               </p>

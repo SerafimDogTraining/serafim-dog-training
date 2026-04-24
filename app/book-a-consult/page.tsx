@@ -109,10 +109,10 @@ export default function BookAConsultPage() {
           <p className="text-center text-xs text-charcoal-muted font-light mt-6">
             Can&apos;t find a time? Email us at{" "}
             <a
-              href="mailto:hello@serafimdogtraining.com"
+              href="mailto:arthur@serafimdogtraining.com"
               className="text-forest hover:text-gold transition-colors"
             >
-              hello@serafimdogtraining.com
+              arthur@serafimdogtraining.com
             </a>
           </p>
         </div>

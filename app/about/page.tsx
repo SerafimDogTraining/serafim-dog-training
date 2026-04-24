@@ -56,7 +56,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             {/* Photo */}
-            <div className="relative sticky top-32 space-y-5">
+            <div className="relative md:sticky top-32 space-y-5">
               <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
                 <Image
                   src="/images/arthur-korra-mountain.jpg"

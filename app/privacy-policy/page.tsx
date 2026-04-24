@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
             {
               title: "7. Your Rights",
               content:
-                "Depending on your location, you may have the right to access, correct, or request deletion of your personal information. To exercise any of these rights, contact us at hello@serafimdogtraining.com.",
+                "Depending on your location, you may have the right to access, correct, or request deletion of your personal information. To exercise any of these rights, contact us at arthur@serafimdogtraining.com.",
             },
             {
               title: "8. Cookies",
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
             {
               title: "10. Contact",
               content:
-                "If you have questions about this Privacy Policy, contact us at hello@serafimdogtraining.com.",
+                "If you have questions about this Privacy Policy, contact us at arthur@serafimdogtraining.com.",
             },
           ].map((section) => (
             <div key={section.title}>

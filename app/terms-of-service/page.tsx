@@ -69,7 +69,7 @@ export default function TermsOfServicePage() {
             {
               title: "9. Contact",
               content:
-                "For questions regarding these Terms, contact us at hello@serafimdogtraining.com.",
+                "For questions regarding these Terms, contact us at arthur@serafimdogtraining.com.",
             },
           ].map((section) => (
             <div key={section.title}>
