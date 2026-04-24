@@ -49,11 +49,11 @@ export default function HeroSection() {
               Book a Free Consult
             </a>
           </div>
-          <p className="text-white/45 text-sm font-light">
+          <p className="text-white/90 text-sm font-light" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>
             Or start free —{" "}
             <Link
               href="/community"
-              className="text-white/65 hover:text-gold underline underline-offset-4 decoration-white/30 hover:decoration-gold transition-colors duration-200"
+              className="text-white hover:text-gold underline underline-offset-4 decoration-white/50 hover:decoration-gold transition-colors duration-200"
             >
               join the community →
             </Link>
