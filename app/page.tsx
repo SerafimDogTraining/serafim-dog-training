@@ -300,17 +300,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Photo */}
-            <div className="relative overflow-hidden rounded-sm">
+            <div className="relative overflow-hidden rounded-sm mb-8 md:mb-0">
               <Image
                 src="/images/arthur-about.jpg"
                 alt="Arthur Serafim and Korra"
                 width={600}
                 height={800}
                 unoptimized
-                className="w-full h-auto max-h-[420px] md:max-h-none object-cover object-[center_30%]"
+                className="w-full h-auto max-h-[320px] md:max-h-none object-cover object-[center_30%]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
             </div>
 
             {/* Bio */}
