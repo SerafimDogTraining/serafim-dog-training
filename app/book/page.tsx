@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import CalendlyEmbed from '@/components/CalendlyEmbed'
 
 export const metadata: Metadata = {
   title: 'Book a Free Consult | Serafim Dog Training',
@@ -18,18 +19,7 @@ export default function BookPage() {
             Pick a time that works for you. We&apos;ll talk through your dog&apos;s needs and find the right path forward.
           </p>
         </div>
-
-        {/* Calendly inline widget */}
-        <div
-          className="calendly-inline-widget rounded-sm overflow-hidden"
-          data-url="https://calendly.com/arthur-serafimdogtraining/15min?hide_gdpr_banner=1"
-          style={{ minWidth: '320px', height: '700px' }}
-        />
-        <script
-          type="text/javascript"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          async
-        />
+        <CalendlyEmbed url="https://calendly.com/arthur-serafimdogtraining/15min" />
       </div>
     </main>
   )
