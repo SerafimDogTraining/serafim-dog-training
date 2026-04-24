@@ -41,13 +41,47 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="font-display text-5xl md:text-6xl text-white font-medium leading-tight max-w-2xl mb-7">
-            Not Just a Trainer.{" "}
-            <em className="italic font-light">A Dog Handler.</em>
+            The Truth About Dog Training:{" "}
+            <em className="italic font-light">It&apos;s Not About the Dog.</em>
           </h1>
           <p className="text-white/70 font-light text-lg max-w-xl leading-relaxed">
             I started training dogs in 2020 and built my practice through
             results. Based in Austin, TX. Working with clients worldwide.
           </p>
+        </div>
+      </section>
+
+      {/* Methodology */}
+      <section className="bg-white py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
+            The Approach
+          </p>
+          <div className="space-y-6 text-base font-light leading-relaxed text-charcoal-light">
+            <p>
+              After years of working with dogs across every breed, background, and
+              behavior problem, I kept arriving at the same conclusion: the dog is
+              rarely the problem. The dog is a mirror. What you&apos;re seeing in your
+              dog — the reactivity, the disobedience, the unpredictability — is
+              almost always a reflection of what&apos;s happening on the other end of the
+              leash.
+            </p>
+            <p>
+              That&apos;s not a criticism. Most owners simply haven&apos;t been taught how to
+              communicate clearly with their dog. They&apos;ve been given commands without
+              context, tools without technique, and advice that works in a training
+              facility but falls apart the moment they&apos;re back in the real world.
+              Reliable results don&apos;t come from drilling your dog — they come from
+              you understanding how your dog thinks, what your dog needs, and how to
+              hold that standard consistently across every environment.
+            </p>
+            <p>
+              Every program I run is built around this. You&apos;re not dropping your dog
+              off and picking up a trained version. You&apos;re learning alongside them.
+              By the end, your dog listens to you — not because of me, but because
+              you&apos;ve become the handler your dog needs you to be.
+            </p>
+          </div>
         </div>
       </section>
 
