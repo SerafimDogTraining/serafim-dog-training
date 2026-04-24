@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/book",
+        destination: "https://calendly.com/arthur-serafimdogtraining/15min",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
