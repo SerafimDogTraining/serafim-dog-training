@@ -306,8 +306,8 @@ export default function HomePage() {
                 About Me
               </p>
               <h2 className="font-display text-4xl md:text-5xl text-forest font-medium leading-tight mb-7">
-                Not Just a Trainer.{" "}
-                <em className="italic font-light">A Dog Handler.</em>
+                Consistent Handlers ={" "}
+                <em className="italic font-light">Reliable Dogs.</em>
               </h2>
               <div className="space-y-4 text-base font-light leading-relaxed text-charcoal-light mb-10">
                 <p>
