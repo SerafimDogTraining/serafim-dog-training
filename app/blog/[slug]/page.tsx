@@ -175,9 +175,7 @@ export default async function BlogPostPage({ params }: Props) {
             figure out the right path forward.
           </p>
           <a
-            href="https://calendly.com/arthur-serafimdogtraining/15min"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book"
             className="inline-block text-sm tracking-wide px-8 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
           >
             Book a Free Consult

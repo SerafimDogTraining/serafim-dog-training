@@ -43,9 +43,7 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-5">
             <a
-              href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book"
               className="block w-full md:w-auto text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold"
             >
               Book a Free Consult

@@ -73,9 +73,7 @@ export default function ServiceDogPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book"
               className="inline-block text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
             >
               Book a Free Consult
@@ -167,9 +165,7 @@ export default function ServiceDogPage() {
                   starting point, the tasks required, and your timeline.
                 </p>
                 <Link
-                  href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+                  href="/book"
                   className="block text-sm tracking-wide px-6 py-3 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold rounded-sm"
                 >
                   Book a Free Consult
@@ -240,9 +236,7 @@ export default function ServiceDogPage() {
             is the right fit for your dog.
           </p>
           <Link
-            href="https://calendly.com/arthur-serafimdogtraining/15min"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book"
             className="inline-block text-sm tracking-wide px-9 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
           >
             Book a Free Consult

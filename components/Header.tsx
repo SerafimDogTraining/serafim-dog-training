@@ -163,9 +163,7 @@ export default function Header() {
           ))}
 
           <a
-            href="https://calendly.com/arthur-serafimdogtraining/15min"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book"
             className="text-sm tracking-wide px-5 py-2.5 bg-forest text-white hover:bg-forest-light transition-colors duration-200 rounded-sm font-medium"
           >
             Book a Free Consult
@@ -229,9 +227,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book"
               className="text-sm tracking-wide px-5 py-3 bg-forest text-white hover:bg-forest-light transition-colors text-center rounded-sm font-medium mt-1"
             >
               Book a Free Consult

@@ -478,9 +478,7 @@ export default function HomePage() {
             </em>
           </h2>
           <Link
-            href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+            href="/book"
             className="inline-block text-sm tracking-wide px-9 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
           >
             Book a Free Consult

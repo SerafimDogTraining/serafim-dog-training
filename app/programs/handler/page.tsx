@@ -86,9 +86,7 @@ export default function HandlerProgramPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <Link
-              href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book"
               className="inline-block text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold"
             >
               Book a Free Consult
@@ -210,9 +208,7 @@ export default function HandlerProgramPage() {
                 </p>
                 <div className="space-y-3">
                   <Link
-                    href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+                    href="/book"
                     className="block text-sm tracking-wide px-6 py-3 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold rounded-sm"
                   >
                     Book a Free Consult
@@ -278,9 +274,7 @@ export default function HandlerProgramPage() {
             process — start with a free 15-min call.
           </p>
           <Link
-            href="https://calendly.com/arthur-serafimdogtraining/15min"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book"
             className="inline-block text-sm tracking-wide px-9 py-4 bg-forest text-white hover:bg-forest-light transition-colors duration-200 font-semibold"
           >
             Book a Free Consult

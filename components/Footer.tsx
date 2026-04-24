@@ -11,7 +11,7 @@ const companyLinks = [
   { href: "/about", label: "About Me" },
   { href: "/blog", label: "Blog" },
   { href: "/community", label: "Community" },
-  { href: "https://calendly.com/arthur-serafimdogtraining/15min", label: "Book a Free Consult" },
+  { href: "/book", label: "Book a Free Consult" },
 ];
 
 const legalLinks = [
@@ -70,9 +70,7 @@ export default function Footer() {
               behavioral rehabilitation — in Austin and online.
             </p>
             <a
-              href="https://calendly.com/arthur-serafimdogtraining/15min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book"
               className="inline-block text-xs tracking-wide px-5 py-2.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-medium rounded-sm mb-4"
             >
               Book a Free Consult
