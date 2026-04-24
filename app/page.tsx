@@ -296,25 +296,12 @@ export default function HomePage() {
       </section>
 
       {/* ── 4. Credibility Bridge ─────────────────────────────────── */}
-      <section className="bg-offwhite py-24 md:py-32">
+      <section className="bg-offwhite py-16 md:py-32">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            {/* Photo */}
-            <div className="relative overflow-hidden rounded-sm mb-8 md:mb-0">
-              <Image
-                src="/images/arthur-about.jpg"
-                alt="Arthur Serafim and Korra"
-                width={600}
-                height={800}
-                unoptimized
-                className="w-full h-auto max-h-[320px] md:max-h-none object-cover object-[center_30%]"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
-            </div>
+          <div className="flex flex-col md:grid md:grid-cols-2 md:gap-16 md:items-center">
 
-            {/* Bio */}
-            <div>
+            {/* Bio — first on mobile, second on desktop */}
+            <div className="order-1 md:order-2 mb-8 md:mb-0">
               <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-5">
                 About Me
               </p>
@@ -359,6 +346,23 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+
+            {/* Photo — second on mobile, first on desktop */}
+            <div className="order-2 md:order-1 relative">
+              <div className="overflow-hidden rounded-sm h-[300px] md:h-auto md:aspect-[4/5]">
+                <Image
+                  src="/images/arthur-about.jpg"
+                  alt="Arthur Serafim and Korra"
+                  width={600}
+                  height={800}
+                  unoptimized
+                  className="w-full h-full object-cover object-[center_30%]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+            </div>
+
           </div>
         </div>
       </section>
