@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex items-center overflow-hidden" style={{ aspectRatio: '4/3' }}>
+    <section className="relative flex items-center overflow-hidden min-h-[520px] md:min-h-0 md:aspect-[4/3]">
       {/* Background image */}
       <Image
         src="/images/hero-mountain.jpg"
@@ -33,7 +33,7 @@ export default function HeroSection() {
           <p className="text-gold text-xs uppercase tracking-[0.3em] font-medium mb-7">
             In-Person in Austin · Online Everywhere
           </p>
-          <h1 className="font-display text-5xl md:text-[3.75rem] lg:text-7xl text-white font-medium leading-[1.05] mb-6 tracking-tight">
+          <h1 className="font-display text-4xl md:text-[3.75rem] lg:text-7xl text-white font-medium leading-[1.05] mb-6 tracking-tight">
             Let&apos;s Unlock{" "}
             <em className="italic font-light">Your Dog&apos;s Potential.</em>
           </h1>
@@ -46,7 +46,7 @@ export default function HeroSection() {
               href="https://calendly.com/arthur-serafimdogtraining/15min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold"
+              className="block w-full md:w-auto text-sm tracking-wide px-7 py-3.5 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold"
             >
               Book a Free Consult
             </a>
