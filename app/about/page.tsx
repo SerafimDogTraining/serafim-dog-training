@@ -54,24 +54,9 @@ export default function AboutPage() {
       {/* Story + Photo */}
       <section className="bg-offwhite py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            {/* Photo */}
-            <div className="relative md:sticky top-32 space-y-5">
-              <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
-                <Image
-                  src="/images/arthur-korra-mountain.jpg"
-                  alt="Arthur Serafim and Korra"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-                <div className="absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
-              </div>
-            </div>
-
-            {/* Story */}
-            <div>
+          <div className="flex flex-col md:grid md:grid-cols-2 md:gap-16 md:items-start">
+            {/* Story — first on mobile, second on desktop */}
+            <div className="order-1 md:order-2 mb-8 md:mb-0">
               <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
                 The Story
               </p>
@@ -115,6 +100,24 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
+
+            {/* Photo — second on mobile, first on desktop */}
+            <div className="order-2 md:order-1 relative md:sticky md:top-32">
+              <div className="overflow-hidden rounded-sm h-[300px] md:h-auto md:aspect-[4/5]">
+                <Image
+                  src="/images/arthur-korra-mountain.jpg"
+                  alt="Arthur Serafim and Korra"
+                  width={600}
+                  height={800}
+                  unoptimized
+                  className="w-full h-full object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+            </div>
+
           </div>
         </div>
       </section>
