@@ -31,7 +31,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 pt-32 md:py-32 md:pt-44 w-full">
         <div className="max-w-2xl">
           <p className="text-gold text-xs uppercase tracking-[0.3em] font-medium mb-7">
-            In-Person in Austin · Online Everywhere
+            Online &amp; In-Person · Austin + Worldwide
           </p>
           <h1 className="font-display text-4xl md:text-[3.75rem] lg:text-7xl text-white font-medium leading-[1.05] mb-6 tracking-tight">
             Let&apos;s Unlock{" "}
