@@ -306,7 +306,7 @@ export default function HomePage() {
                   src="/images/arthur-about.jpg"
                   alt="Arthur Serafim and Korra"
                   fill
-                  className="object-cover object-[center_20%]"
+                  className="object-cover object-[center_40%] md:object-top"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
