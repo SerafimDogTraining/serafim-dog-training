@@ -301,12 +301,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Photo */}
             <div className="relative">
-              <div className="relative aspect-[3/2] md:aspect-[4/5] rounded-sm overflow-hidden">
+              <div className="relative aspect-square md:aspect-[4/5] rounded-sm overflow-hidden">
                 <Image
                   src="/images/arthur-about.jpg"
                   alt="Arthur Serafim and Korra"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[center_20%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
