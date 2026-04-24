@@ -58,6 +58,23 @@ export default function HeroSection() {
               join the community →
             </Link>
           </p>
+
+          {/* Social Proof Ticker */}
+          <div className="border-t border-b border-white/20 py-4 mt-8">
+            <div className="flex flex-wrap justify-center md:justify-between gap-6 md:gap-0 text-white/90">
+              {[
+                { stat: "7M+", label: "Views Across Platforms" },
+                { stat: "100+", label: "Dogs Trained" },
+                { stat: "24K+", label: "Followers" },
+                { stat: "3", label: "Viral Videos" },
+              ].map((item) => (
+                <div key={item.stat} className="text-center">
+                  <div className="font-display text-2xl font-semibold">{item.stat}</div>
+                  <div className="text-xs uppercase tracking-[0.2em] font-light opacity-75">{item.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

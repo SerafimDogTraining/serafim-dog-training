@@ -4,14 +4,14 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Serafim Dog Training",
+  title: "Austin Dog Trainer | Service Dog Training | Serafim Dog Training",
   description:
-    "Expert dog training — in person in Austin, online everywhere. Working dogs, service dogs, and behavioral rehabilitation. Every dog gets a custom plan.",
+    "Expert dog training in Austin, TX. Specializing in service dogs, working dogs, and behavioral rehabilitation. Book a free 15-min consult today.",
   alternates: { canonical: "https://www.serafimdogtraining.com" },
   openGraph: {
-    title: "Serafim Dog Training",
+    title: "Austin Dog Trainer | Service Dog Training | Serafim Dog Training",
     description:
-      "Expert dog training — in person in Austin, online everywhere. Working dogs, service dogs, and behavioral rehabilitation.",
+      "Expert dog training in Austin, TX. Specializing in service dogs, working dogs, and behavioral rehabilitation. Book a free 15-min consult today.",
     url: "https://www.serafimdogtraining.com",
   },
 };

@@ -19,6 +19,16 @@ export default function BookPage() {
             Pick a time that works for you. We&apos;ll talk through your dog&apos;s needs and find the right path forward.
           </p>
         </div>
+        {/* What to expect */}
+        <div className="bg-white rounded-sm p-6 mb-8 text-left max-w-xl mx-auto">
+          <p className="text-forest font-medium mb-3">What we&apos;ll cover in 15 minutes:</p>
+          <ul className="space-y-2 text-charcoal-light font-light text-sm">
+            <li className="flex gap-2"><span className="text-gold">→</span> Your dog&apos;s current situation and biggest challenges</li>
+            <li className="flex gap-2"><span className="text-gold">→</span> Your training goals and timeline</li>
+            <li className="flex gap-2"><span className="text-gold">→</span> Which program fits best for you and your dog</li>
+          </ul>
+          <p className="text-xs text-charcoal-muted mt-4 font-light">No sales pressure — just an honest conversation.</p>
+        </div>
         <CalendlyEmbed url="https://calendly.com/arthur-serafimdogtraining/15min" />
       </div>
     </main>

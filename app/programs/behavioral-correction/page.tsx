@@ -3,9 +3,9 @@ import Link from "next/link";
 import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
-  title: "Behavioral Correction Program",
+  title: "Dog Behavioral Correction Austin | Reactive Dog Training | Serafim",
   description:
-    "Understand and correct reactive, aggressive, or anxious dog behavior at the root. Expert dog training for real results — in Austin and online.",
+    "Fix reactive, aggressive, or anxious dog behavior at the root. Expert behavioral correction in Austin, TX — in-person and online. Book a free consult.",
   alternates: {
     canonical:
       "https://www.serafimdogtraining.com/programs/behavioral-correction",

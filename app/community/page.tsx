@@ -97,10 +97,14 @@ export default function CommunityPage() {
               <h3 className="font-display text-2xl text-forest font-semibold mb-2">
                 Be first to know when we open.
               </h3>
-              <p className="text-charcoal-muted font-light text-sm leading-relaxed mb-8">
+              <p className="text-charcoal-muted font-light text-sm leading-relaxed mb-3">
                 Drop your info below and we&apos;ll reach out when spots
                 become available.
               </p>
+              <div className="bg-gold/10 border border-gold/30 rounded-sm px-4 py-3 mb-6">
+                <p className="text-forest text-sm font-medium">First 100 members lock in $20/month for life.</p>
+                <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $30/month after founding spots fill.</p>
+              </div>
               <form action="#" method="POST" className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -156,7 +160,7 @@ export default function CommunityPage() {
                   type="submit"
                   className="w-full text-sm tracking-wide px-6 py-3.5 bg-forest text-white hover:bg-forest-light transition-colors duration-200 font-semibold rounded-sm mt-2"
                 >
-                  Join the Waitlist
+                  Reserve My Founding Spot
                 </button>
               </form>
             </div>
@@ -164,28 +168,6 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* CTA to consult */}
-      <section className="bg-forest py-20 md:py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div>
-              <h2 className="font-display text-3xl md:text-4xl text-white font-medium mb-3">
-                Want personalized training?
-              </h2>
-              <p className="text-white/60 font-light max-w-md">
-                The community is free. One-on-one training is where the real
-                transformation happens.
-              </p>
-            </div>
-            <Link
-              href="/book"
-              className="inline-block text-sm tracking-wide px-8 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold shrink-0"
-            >
-              Book a Free Consult
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

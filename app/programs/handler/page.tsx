@@ -3,9 +3,9 @@ import Link from "next/link";
 import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
-  title: "The Handler Program",
+  title: "Advanced Dog Training Austin | The Handler Program | Serafim",
   description:
-    "The most comprehensive dog training experience we offer. Deep handler education, advanced training, and complete transformation — in Austin and online.",
+    "The most comprehensive dog training experience — 12 sessions of advanced handler education, real-world proofing, and complete transformation. Austin + online.",
   alternates: {
     canonical: "https://www.serafimdogtraining.com/programs/handler",
   },

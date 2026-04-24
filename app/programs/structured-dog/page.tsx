@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Structured Dog Package",
+  title: "Dog Training Austin | Structured Dog Package | Serafim Dog Training",
   description:
-    "Build a well-structured dog from the ground up. 3 sessions 1-on-1 covering core commands, structure, and setting your dog up for a successful life — in Austin and online.",
+    "3 sessions to build a well-structured dog from the ground up — core commands, impulse control, and a foundation for life. Austin + online.",
   alternates: {
     canonical: "https://www.serafimdogtraining.com/programs/structured-dog",
   },

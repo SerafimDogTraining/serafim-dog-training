@@ -4,9 +4,9 @@ import Link from "next/link";
 import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
-  title: "Service Dog Program",
+  title: "Service Dog Training Austin | Task-Trained Service Dogs | Serafim",
   description:
-    "Build a task-trained service or therapy dog. Custom training plan for public access, task work, and real-world scenarios — in Austin and online.",
+    "Austin service dog training — task work, public access, and handler education. Build a reliable service or therapy dog. Book a free consult.",
   alternates: {
     canonical: "https://www.serafimdogtraining.com/programs/service-dog",
   },
