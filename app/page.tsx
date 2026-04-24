@@ -118,7 +118,7 @@ const testimonials = [
 const trustBadges = [
   { stat: "100+", label: "Dogs Trained" },
   { stat: "Expert", label: "Service Dog Training" },
-  { stat: "In-Person", label: "Austin + Online" },
+  { stat: "In-Person + Online", label: "Austin & Worldwide" },
   { stat: "Custom", label: "Training Plans" },
 ];
 
