@@ -1,19 +1,15 @@
 'use client'
 
-import Script from 'next/script'
-
 export default function CalendlyEmbed({ url }: { url: string }) {
   return (
-    <>
-      <div
-        className="calendly-inline-widget rounded-sm overflow-hidden"
-        data-url={`${url}?hide_gdpr_banner=1`}
-        style={{ minWidth: '320px', height: '700px' }}
+    <div className="w-full rounded-sm overflow-hidden" style={{ height: '700px' }}>
+      <iframe
+        src={`${url}?embed_domain=serafimdogtraining.com&embed_type=Inline&hide_gdpr_banner=1`}
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        title="Book a Free Consult"
       />
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-      />
-    </>
+    </div>
   )
 }
