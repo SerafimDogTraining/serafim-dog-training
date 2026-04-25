@@ -105,7 +105,9 @@ export default function CommunityPage() {
                 <p className="text-forest text-sm font-medium">First 100 members lock in $20/month for life.</p>
                 <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $30/month after founding spots fill.</p>
               </div>
-              <form action="#" method="POST" className="space-y-4">
+              <form action="https://formspree.io/f/xvzdyzvw" method="POST" className="space-y-4">
+                <input type="hidden" name="_next" value="https://www.serafimdogtraining.com/community/thank-you" />
+                <input type="hidden" name="_subject" value="New Community Waitlist Signup" />
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label
