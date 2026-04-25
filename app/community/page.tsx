@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import CommunityWaitlistForm from "@/components/CommunityWaitlistForm";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -107,71 +107,11 @@ export default function CommunityPage() {
                 <p className="text-forest text-sm font-medium">First 100 members lock in $20/month for life.</p>
                 <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $30/month after founding spots fill.</p>
               </div>
-              <form action="https://formspree.io/f/xvzdyzvw" method="POST" className="space-y-4">
-                <input type="hidden" name="_next" value="https://www.serafimdogtraining.com/community/thank-you" />
-                <input type="hidden" name="_subject" value="New Community Waitlist Signup" />
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="first-name"
-                      className="block text-xs font-medium text-charcoal uppercase tracking-[0.12em] mb-2"
-                    >
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="first-name"
-                      name="first_name"
-                      required
-                      className="w-full px-4 py-3 border border-offwhite-soft rounded-sm text-sm text-charcoal placeholder:text-charcoal-muted focus:outline-none focus:border-forest transition-colors duration-200"
-                      placeholder="Jane"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="last-name"
-                      className="block text-xs font-medium text-charcoal uppercase tracking-[0.12em] mb-2"
-                    >
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="last-name"
-                      name="last_name"
-                      required
-                      className="w-full px-4 py-3 border border-offwhite-soft rounded-sm text-sm text-charcoal placeholder:text-charcoal-muted focus:outline-none focus:border-forest transition-colors duration-200"
-                      placeholder="Smith"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-xs font-medium text-charcoal uppercase tracking-[0.12em] mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border border-offwhite-soft rounded-sm text-sm text-charcoal placeholder:text-charcoal-muted focus:outline-none focus:border-forest transition-colors duration-200"
-                    placeholder="jane@example.com"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full text-sm tracking-wide px-6 py-3.5 bg-forest text-white hover:bg-forest-light transition-colors duration-200 font-semibold rounded-sm mt-2"
-                >
-                  Reserve My Founding Spot
-                </button>
-              </form>
+              <CommunityWaitlistForm />
             </div>
           </div>
         </div>
       </section>
-
     </>
   );
 }
