@@ -48,9 +48,11 @@ export default function CommunityPage() {
         <div className="max-w-4xl mx-auto px-6">
           <video
             className="w-full rounded-sm"
-            controls
+            autoPlay
+            muted
+            loop
             playsInline
-            preload="metadata"
+            controls
           >
             <source src="/videos/community.mp4" type="video/mp4" />
           </video>
