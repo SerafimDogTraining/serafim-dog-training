@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CommunityWaitlistForm from "@/components/CommunityWaitlistForm";
+import CommunityVideo from "@/components/CommunityVideo";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -46,16 +47,7 @@ export default function CommunityPage() {
       {/* Video */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <video
-            className="w-full rounded-sm"
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-          >
-            <source src="/videos/community.mp4" type="video/mp4" />
-          </video>
+          <CommunityVideo />
         </div>
       </section>
 
