@@ -49,18 +49,7 @@ function CheckIcon() {
 
 export default function PlaybookPage() {
   return (
-    <div className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2">
-      {/* Subtle wordmark linking back to homepage */}
-      <Link
-        href="/"
-        className="absolute top-5 left-5 sm:top-6 sm:left-6 z-10 group leading-none"
-        aria-label="Back to Serafim Dog Training homepage"
-      >
-        <span className="block font-display text-sm sm:text-base font-semibold tracking-wide text-white/80 group-hover:text-gold transition-colors duration-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
-          Serafim Dog Training
-        </span>
-      </Link>
-
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
       {/* Left: full photo, height follows image aspect ratio */}
       <section>
         <Image
@@ -77,6 +66,14 @@ export default function PlaybookPage() {
       {/* Right: form card */}
       <section className="flex items-center justify-center px-6 sm:px-10 lg:px-14 py-16 lg:py-20 bg-offwhite">
         <div className="w-full max-w-md">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 text-xs tracking-wide text-gold hover:text-gold-light transition-colors duration-200 mb-4"
+          >
+            <span aria-hidden="true">←</span>
+            <span>Back to site</span>
+          </Link>
+
           <div className="bg-white border border-offwhite-soft rounded-md shadow-[0_20px_60px_-20px_rgba(27,77,46,0.25)] p-8 sm:p-10">
             <p className="text-[11px] uppercase tracking-[0.22em] text-gold font-semibold mb-3">
               Free Instant Access
