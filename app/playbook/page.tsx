@@ -49,19 +49,17 @@ function CheckIcon() {
 export default function PlaybookPage() {
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
-      {/* Left: forest panel + book mockup */}
-      <section className="bg-forest flex items-center justify-center px-8 sm:px-12 py-16 lg:py-20 lg:min-h-screen">
-        <div className="w-full max-w-sm">
-          <Image
-            src="/images/playbook-mockup.png"
-            alt="The Handler's Playbook book cover"
-            width={760}
-            height={570}
-            priority
-            sizes="(min-width: 1024px) 380px, (min-width: 640px) 340px, 280px"
-            className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
-          />
-        </div>
+      {/* Left: full-bleed photo with strong forest overlay */}
+      <section className="relative bg-forest min-h-[40vh] lg:min-h-screen overflow-hidden">
+        <Image
+          src="/images/playbook-hero.png"
+          alt=""
+          fill
+          priority
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-forest/70" />
       </section>
 
       {/* Right: form card */}
