@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import PlaybookForm from "./PlaybookForm";
 
 export const metadata: Metadata = {
@@ -48,7 +49,18 @@ function CheckIcon() {
 
 export default function PlaybookPage() {
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+    <div className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2">
+      {/* Subtle wordmark linking back to homepage */}
+      <Link
+        href="/"
+        className="absolute top-5 left-5 sm:top-6 sm:left-6 z-10 group leading-none"
+        aria-label="Back to Serafim Dog Training homepage"
+      >
+        <span className="block font-display text-sm sm:text-base font-semibold tracking-wide text-white/80 group-hover:text-gold transition-colors duration-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+          Serafim Dog Training
+        </span>
+      </Link>
+
       {/* Left: full photo, height follows image aspect ratio */}
       <section>
         <Image
