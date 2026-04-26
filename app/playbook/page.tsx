@@ -49,17 +49,17 @@ function CheckIcon() {
 export default function PlaybookPage() {
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
-      {/* Left: full-bleed photo with strong forest overlay */}
-      <section className="relative bg-forest min-h-[40vh] lg:min-h-screen overflow-hidden">
+      {/* Left: full photo, height follows image aspect ratio */}
+      <section>
         <Image
           src="/images/playbook-hero.png"
           alt=""
-          fill
+          width={1023}
+          height={1537}
           priority
           sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover object-center"
+          className="w-full h-auto"
         />
-        <div className="absolute inset-0 bg-forest/70" />
       </section>
 
       {/* Right: form card */}
