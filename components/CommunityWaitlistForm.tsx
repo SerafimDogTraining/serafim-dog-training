@@ -13,18 +13,30 @@ export default function CommunityWaitlistForm() {
     setLoading(true);
     setError(false);
 
-    const res = await fetch("https://formspree.io/f/xvzdyzvw", {
-      method: "POST",
-      headers: { Accept: "application/json" },
-      body: new FormData(e.currentTarget),
-    });
+    const data = new FormData(e.currentTarget);
+    const payload = {
+      firstName: String(data.get("first_name") ?? ""),
+      lastName: String(data.get("last_name") ?? ""),
+      email: String(data.get("email") ?? ""),
+    };
 
-    if (res.ok) {
-      router.push("/community/thank-you");
-    } else {
-      setLoading(false);
-      setError(true);
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        router.push("/community/thank-you");
+        return;
+      }
+    } catch {
+      // fall through to error state
     }
+
+    setLoading(false);
+    setError(true);
   }
 
   return (
