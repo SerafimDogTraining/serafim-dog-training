@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const programs = [
   { href: "/programs/structured-dog", label: "Structured Dog Package" },
@@ -51,7 +54,10 @@ const socials = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
   const year = new Date().getFullYear();
+
+  if (pathname?.startsWith("/playbook")) return null;
 
   return (
     <footer className="bg-forest text-white">
@@ -163,9 +169,16 @@ export default function Footer() {
           <p className="text-xs text-white/40 font-light">
             © {year} Serafim Dog Training. All rights reserved.
           </p>
-          <p className="text-xs text-white/30 font-light">
-            serafimdogtraining.com
-          </p>
+          <div className="flex items-center gap-3 text-xs text-white/30 font-light">
+            <Link
+              href="/playbook"
+              className="text-white/40 hover:text-white/70 transition-colors"
+            >
+              Free Playbook
+            </Link>
+            <span aria-hidden="true">·</span>
+            <span>serafimdogtraining.com</span>
+          </div>
         </div>
       </div>
     </footer>
