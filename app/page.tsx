@@ -20,7 +20,7 @@ const offers = [
   {
     href: "/programs/structured-dog",
     name: "Structured Dog Package",
-    price: "$500",
+    price: "$999",
     features: [
       "3 sessions 1-on-1 with me",
       "How to build structure from the start",
@@ -32,7 +32,7 @@ const offers = [
   {
     href: "/programs/behavioral-correction",
     name: "Behavioral Correction",
-    price: "$999",
+    price: "$2,000",
     features: [
       "6 sessions 1-on-1 with me",
       "Video review between sessions",
@@ -43,7 +43,7 @@ const offers = [
   {
     href: "/programs/handler",
     name: "Handler Package",
-    price: "$3,000",
+    price: "$3,500",
     features: [
       "12 weekly sessions 1-on-1",
       "Everything in the other packages",

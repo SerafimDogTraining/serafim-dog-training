@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: "Advanced Dog Training Austin | The Handler Program | Serafim",
@@ -91,11 +90,6 @@ export default function HandlerProgramPage() {
             >
               Book a Free Consult
             </Link>
-            <CheckoutButton
-              program="handler"
-              label="Enroll — $3,000 Paid in Full"
-              className="text-sm tracking-wide px-7 py-3.5 border border-white/60 text-white hover:bg-white/10 transition-all duration-200 font-medium cursor-pointer"
-            />
           </div>
           <p className="text-white/40 text-xs font-light">
             Payment plans available — discuss on your call.
@@ -195,30 +189,17 @@ export default function HandlerProgramPage() {
                   Pricing
                 </p>
                 <p className="font-display text-4xl text-white font-medium mb-1">
-                  $3,000
-                </p>
-                <p className="text-white/50 text-sm mb-1 font-light">
-                  Paid in full
-                </p>
-                <p className="font-display text-2xl text-white/70 font-light mb-1">
-                  or $3,500
+                  $3,500
                 </p>
                 <p className="text-white/50 text-sm mb-8 font-light">
-                  Payment plan (installments)
+                  Payment plans available
                 </p>
-                <div className="space-y-3">
-                  <Link
-                    href="/book"
-                    className="block text-sm tracking-wide px-6 py-3 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold rounded-sm"
-                  >
-                    Book a Free Consult
-                  </Link>
-                  <CheckoutButton
-                    program="handler-plan"
-                    label="Payment Plan — $3,500"
-                    className="w-full block text-sm tracking-wide px-6 py-3 border border-white/30 text-white/80 hover:border-white hover:text-white transition-all duration-200 text-center font-medium rounded-sm cursor-pointer"
-                  />
-                </div>
+                <Link
+                  href="/book"
+                  className="block text-sm tracking-wide px-6 py-3 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 text-center font-semibold rounded-sm"
+                >
+                  Book a Free Consult
+                </Link>
               </div>
             </div>
           </div>

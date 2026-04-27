@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: "Dog Behavioral Correction Austin | Reactive Dog Training | Serafim",
@@ -81,11 +80,6 @@ export default function BehavioralCorrectionPage() {
             >
               Book a Free Consult
             </Link>
-            <CheckoutButton
-              program="behavioral-correction"
-              label="Enroll — $997"
-              className="text-sm tracking-wide px-7 py-3.5 border border-white/60 text-white hover:bg-white/10 transition-all duration-200 font-medium cursor-pointer"
-            />
           </div>
         </div>
       </section>
@@ -150,7 +144,7 @@ export default function BehavioralCorrectionPage() {
                   Pricing
                 </p>
                 <p className="font-display text-4xl text-white font-medium mb-2">
-                  $997
+                  $2,000
                 </p>
                 <p className="text-white/50 text-sm font-light mb-2">Payment plans available</p>
                 <p className="text-white/60 font-light text-sm mb-8">

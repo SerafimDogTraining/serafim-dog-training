@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import CheckoutButton from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: "Service Dog Training Austin | Task-Trained Service Dogs | Serafim",

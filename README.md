@@ -1,6 +1,6 @@
 # Serafim Dog Training
 
-Premium dog training website for [serafimdogtraining.com](https://www.serafimdogtraining.com). Built with Next.js 16, Tailwind CSS v4, and Stripe.
+Premium dog training website for [serafimdogtraining.com](https://www.serafimdogtraining.com). Built with Next.js 16 and Tailwind CSS v4.
 
 ---
 
@@ -8,7 +8,7 @@ Premium dog training website for [serafimdogtraining.com](https://www.serafimdog
 
 - **Framework:** Next.js 16 (App Router)
 - **Styling:** Tailwind CSS v4
-- **Payments:** Stripe Checkout
+- **Booking:** Calendly (embedded on `/book`) — all program enrollment funnels through a free consult
 - **Blog:** MDX files with gray-matter + marked
 - **Deploy:** Vercel
 
@@ -34,11 +34,6 @@ Fill in the values in `.env.local`:
 
 | Variable | Description |
 |---|---|
-| `STRIPE_SECRET_KEY` | Stripe secret key (from Stripe Dashboard → Developers → API Keys) |
-| `STRIPE_PRICE_SERVICE_DOG` | Price ID for Service Dog Program |
-| `STRIPE_PRICE_BEHAVIORAL` | Price ID for Behavioral Correction |
-| `STRIPE_PRICE_HANDLER` | Price ID for Handler Program (paid in full) |
-| `STRIPE_PRICE_HANDLER_PLAN` | Price ID for Handler Program (payment plan) |
 | `NEXT_PUBLIC_SITE_URL` | Your production URL (e.g. `https://www.serafimdogtraining.com`) |
 | `NEXT_PUBLIC_CALENDLY_URL` | Your Calendly embed URL |
 | `NEXT_PUBLIC_SKOOL_URL` | Your Skool community URL |
@@ -65,13 +60,11 @@ npm run dev
   /blog/[slug]/          # Individual blog post
   /book-a-consult/       # Calendly embed page
   /community/            # Skool community link page
-  /api/checkout/         # Stripe checkout API route
 
 /components
   Header.tsx             # Fixed nav with Programs dropdown
   Footer.tsx             # Site footer
   HeroSection.tsx        # Video hero (client component)
-  CheckoutButton.tsx     # Stripe checkout trigger (client component)
 
 /lib
   blog.ts                # Blog utilities (read MDX files)
@@ -100,32 +93,16 @@ The post will automatically appear in the blog index and get its own page at `/b
 
 ---
 
-## Stripe Setup
+## Pricing
 
-### 1. Create products in Stripe
+Displayed on the site (informational — payment is collected after the consult, not on the website):
 
-Go to [Stripe Dashboard](https://dashboard.stripe.com) → Products → Add Product.
+- **Structured Dog Package** — $999 (3 sessions)
+- **Behavioral Correction** — $2,000 (6 sessions)
+- **The Handler Program** — $3,500 (12 sessions)
+- **Service Dog Program** — starts at $1,499 (custom)
 
-Create one product per program:
-- **Service Dog Program** — one-time payment, $1,499 starting price
-- **Behavioral Correction** — one-time payment, $997
-- **The Handler Program** — one-time payment, $3,000
-- **The Handler Program (Payment Plan)** — $3,500
-
-After creating each product, copy the **Price ID** (starts with `price_`).
-
-### 2. Add Price IDs to .env.local
-
-```
-STRIPE_PRICE_SERVICE_DOG=price_xxxxx
-STRIPE_PRICE_BEHAVIORAL=price_xxxxx
-STRIPE_PRICE_HANDLER=price_xxxxx
-STRIPE_PRICE_HANDLER_PLAN=price_xxxxx
-```
-
-### 3. Test with Stripe test keys
-
-Use `STRIPE_SECRET_KEY=sk_test_...` for local testing. Stripe's test card: `4242 4242 4242 4242`.
+To update prices, edit `app/page.tsx` (offers array) and the matching `app/programs/<program>/page.tsx`.
 
 ---
 

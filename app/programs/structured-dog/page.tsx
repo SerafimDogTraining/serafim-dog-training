@@ -139,7 +139,7 @@ export default function StructuredDogPage() {
                   Investment
                 </p>
                 <p className="font-display text-4xl text-white font-medium mb-1">
-                  $500
+                  $999
                 </p>
                 <p className="text-white/50 text-sm font-light mb-2">
                   Flexible payment plans available
