@@ -450,7 +450,7 @@ export default function HomePage() {
                 working toward real results.
               </p>
               <p className="text-charcoal-muted font-light text-sm">
-                $30 / month — join the waitlist below.
+                $14.99 / month — join the waitlist below.
               </p>
             </div>
             <div className="shrink-0">

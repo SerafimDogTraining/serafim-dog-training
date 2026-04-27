@@ -96,8 +96,8 @@ export default function CommunityPage() {
                 become available.
               </p>
               <div className="bg-gold/10 border border-gold/30 rounded-sm px-4 py-3 mb-6">
-                <p className="text-forest text-sm font-medium">First 100 members lock in $20/month for life.</p>
-                <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $30/month after founding spots fill.</p>
+                <p className="text-forest text-sm font-medium">First 100 members lock in $10/month for life.</p>
+                <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $14.99/month after founding spots fill.</p>
               </div>
               <CommunityWaitlistForm />
             </div>

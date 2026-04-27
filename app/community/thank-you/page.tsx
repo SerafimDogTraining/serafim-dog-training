@@ -18,7 +18,7 @@ export default function CommunityThankYouPage() {
         </h1>
         <p className="text-white/70 font-light text-lg leading-relaxed mb-4">
           You&apos;re on the founding member waitlist. When we open, you&apos;ll
-          be first to know — and you&apos;ll lock in $20/month for life.
+          be first to know — and you&apos;ll lock in $10/month for life.
         </p>
         <p className="text-white/50 font-light text-sm mb-12">
           Keep an eye on your inbox. We&apos;ll be in touch soon.
