@@ -20,7 +20,7 @@ const benefits = [
   "Direct Q&A access with me",
   "Case study walkthroughs from real training sessions",
   "Early access to new programs and pricing",
-  "Community of owners who are serious about their dogs",
+  "Community of owners who are serious about their dogs",h
   "Resources for service dog handlers and working dog owners",
 ];
 
@@ -97,7 +97,7 @@ export default function CommunityPage() {
               </p>
               <div className="bg-gold/10 border border-gold/30 rounded-sm px-4 py-3 mb-6">
                 <p className="text-forest text-sm font-medium">First 100 members lock in $10/month for life.</p>
-                <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $14.99/month after founding spots fill.</p>
+                <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $20/month after founding spots fill.</p>
               </div>
               <CommunityWaitlistForm />
             </div>
