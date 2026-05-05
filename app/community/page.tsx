@@ -20,7 +20,7 @@ const benefits = [
   "Direct Q&A access with me",
   "Case study walkthroughs from real training sessions",
   "Early access to new programs and pricing",
-  "Community of owners who are serious about their dogs",h
+  "Community of owners who are serious about their dogs",
   "Resources for service dog handlers and working dog owners",
 ];
 
