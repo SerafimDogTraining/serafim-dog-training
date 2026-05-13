@@ -439,18 +439,18 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
             <div className="max-w-xl">
               <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-5">
-                Community
+                Serafim Handler Academy
               </p>
               <h2 className="font-display text-4xl md:text-5xl text-forest font-medium leading-tight mb-5">
-                The Serafim Dog Training Community
+                Train your dog alongside me.
               </h2>
               <p className="text-charcoal-light font-light text-lg leading-relaxed mb-3">
-                Monthly access to training resources, live Q&amp;As, case study
-                breakdowns, and a community of serious dog owners and handlers
-                working toward real results.
+                Structured training tracks, weekly live Q&amp;As, and a
+                real-world training library. Direct access to me and a
+                community of serious handlers.
               </p>
               <p className="text-charcoal-muted font-light text-sm">
-                $20 / month — join the waitlist below.
+                $20 / month · Cancel anytime.
               </p>
             </div>
             <div className="shrink-0">
@@ -458,7 +458,7 @@ export default function HomePage() {
                 href="/community"
                 className="inline-block text-sm tracking-wide px-8 py-4 bg-forest text-white hover:bg-forest-light transition-colors duration-200 font-semibold"
               >
-                Join the Waitlist
+                Join the Academy
               </Link>
             </div>
           </div>

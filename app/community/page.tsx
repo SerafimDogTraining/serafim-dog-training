@@ -1,106 +1,211 @@
 import type { Metadata } from "next";
-import CommunityWaitlistForm from "@/components/CommunityWaitlistForm";
-import CommunityVideo from "@/components/CommunityVideo";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Community",
+  title: "Serafim Handler Academy — Train Your Dog Alongside Me",
   description:
-    "Join the Serafim Dog Training community on Skool. Training tips, Q&A, exclusive resources for clients and dog handlers.",
+    "Real-world obedience. Structured training. Direct access to me and a community of serious handlers. $20/month, cancel anytime.",
   alternates: { canonical: "https://www.serafimdogtraining.com/community" },
   openGraph: {
-    title: "Community — Serafim Dog Training",
+    title: "Serafim Handler Academy — Train Your Dog Alongside Me",
     description:
-      "Join our training community. Tips, Q&A, and exclusive resources.",
+      "Real-world obedience. Structured training. Direct access to me and a community of serious handlers.",
     url: "https://www.serafimdogtraining.com/community",
   },
 };
 
-const benefits = [
-  "Weekly training tips and technique breakdowns",
-  "Direct Q&A access with me",
-  "Case study walkthroughs from real training sessions",
-  "Early access to new programs and pricing",
-  "Community of owners who are serious about their dogs",
-  "Resources for service dog handlers and working dog owners",
+const ACADEMY_URL = "https://serafim-handler-academy.circle.so";
+
+const whoBullets = [
+  "You want to train your dog at your own pace — not lock into someone else's calendar.",
+  "You want to learn dog training the real way — not the watered-down version social media sells.",
+  "You're ready to take ownership of your dog and your handling instead of outsourcing the whole thing.",
+];
+
+const whatYouGet = [
+  {
+    title: "Foundation to Advanced Training Tracks",
+    body: "A full curriculum that walks you from day-one foundation work all the way through advanced obedience and real-world reliability. New material added as we go.",
+  },
+  {
+    title: "Weekly Live Q&As",
+    body: "Show up live every week. Bring your dog, your video, your questions. You're getting answers from me directly — not a moderator, not a chatbot.",
+  },
+  {
+    title: "Real-World Training Library",
+    body: "A growing library of actual training sessions — public access, distractions, neutrality, leash work, off-leash. Watch how it's done in the real world, not a sterile training room.",
+  },
 ];
 
 export default function CommunityPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-forest pt-40 pb-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
-            Community
-          </p>
-          <h1 className="font-display text-5xl md:text-6xl text-white font-medium leading-tight max-w-2xl mb-7">
-            The Serafim Dog Training Community
-          </h1>
-          <p className="text-white/70 font-light text-lg max-w-xl leading-relaxed">
-            A private community for dog owners who are serious about doing this
-            right. Training tips, Q&amp;A, and support — join the waitlist to
-            get notified when we open.
-          </p>
+      {/* ── 1. Hero ────────────────────────────────────────────────── */}
+      <section className="relative bg-forest pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
+        {/* Subtle grain */}
+        <div
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+            backgroundSize: "200px 200px",
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+            {/* Copy */}
+            <div className="order-2 md:order-1">
+              <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
+                Serafim Handler Academy
+              </p>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white font-medium leading-[1.05] tracking-tight mb-6">
+                Train Your Dog{" "}
+                <em className="italic font-light">Alongside Me.</em>
+              </h1>
+              <p className="text-white/75 font-light text-lg leading-relaxed max-w-lg mb-9">
+                Real-world obedience. Structured training. Direct access to me
+                and a community of serious handlers.
+              </p>
+              <a
+                href={ACADEMY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm tracking-wide px-8 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold rounded-sm"
+              >
+                Join the Academy
+              </a>
+              <p className="text-white/50 text-xs font-light mt-4 tracking-wide">
+                $20 / month · Cancel anytime
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="order-1 md:order-2 relative">
+              <div className="relative overflow-hidden rounded-sm aspect-[4/5] md:aspect-[4/5] shadow-2xl">
+                <Image
+                  src="/images/community-hero.jpg"
+                  alt="Arthur Serafim training a dog"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Video */}
-      <section className="bg-white py-16">
+      {/* ── 2. Who This Is For ────────────────────────────────────── */}
+      <section className="bg-forest-dark py-24 md:py-32">
         <div className="max-w-4xl mx-auto px-6">
-          <CommunityVideo />
+          <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-5">
+            Inside the Academy
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl text-white font-medium leading-tight mb-10">
+            Who This Is For
+          </h2>
+
+          <p className="text-white/75 font-light text-lg leading-relaxed mb-10">
+            The Academy is for handlers who want to actually do the work — not
+            just watch someone else do it. Whether you&apos;re starting with a
+            puppy, fixing real problems in an adult dog, or building toward
+            service or working-level reliability, this is the room for you.
+          </p>
+
+          <ul className="space-y-5 mb-12">
+            {whoBullets.map((line) => (
+              <li key={line} className="flex gap-4 items-start">
+                <span className="text-gold font-display text-2xl leading-none mt-0.5 shrink-0">
+                  →
+                </span>
+                <span className="text-white/85 font-light leading-relaxed text-lg">
+                  {line}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="border-l-4 border-gold pl-7">
+            <p className="font-display text-2xl md:text-3xl text-white font-light italic leading-snug">
+              If you&apos;re looking for a quick fix, this isn&apos;t it. If
+              you&apos;re ready to put in the work, this is where it happens.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* What's Inside + Waitlist Form */}
+      {/* ── 3. What You Get ───────────────────────────────────────── */}
       <section className="bg-offwhite py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-5">
-                What&apos;s Inside
-              </p>
-              <ul className="space-y-4">
-                {benefits.map((item) => (
-                  <li key={item} className="flex gap-4 items-start">
-                    <svg
-                      className="w-5 h-5 text-gold shrink-0 mt-0.5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-charcoal-light font-light leading-relaxed">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+          <div className="mb-14">
+            <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-5">
+              What You Get
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl text-forest font-medium leading-tight max-w-xl">
+              Everything you need to train a reliable dog.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+            {whatYouGet.map((card) => (
+              <div
+                key={card.title}
+                className="flex flex-col p-8 bg-white border border-offwhite-soft rounded-sm"
+              >
+                <div className="w-10 h-10 mb-6 rounded-sm bg-forest flex items-center justify-center">
+                  <span className="text-gold font-display text-xl font-semibold">
+                    ✓
+                  </span>
+                </div>
+                <h3 className="font-display text-2xl text-forest font-semibold mb-4 leading-tight">
+                  {card.title}
+                </h3>
+                <p className="text-charcoal-light font-light leading-relaxed text-[0.9375rem]">
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. Pricing ────────────────────────────────────────────── */}
+      <section className="bg-offwhite pb-24 md:pb-32">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="bg-white border border-offwhite-soft rounded-sm p-10 md:p-14 text-center">
+            <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
+              Membership
+            </p>
+
+            <div className="mb-3">
+              <span className="font-display text-6xl md:text-7xl text-forest font-medium leading-none">
+                $20
+              </span>
+              <span className="font-display text-2xl text-charcoal-muted font-light ml-2">
+                / month
+              </span>
             </div>
 
-            {/* Waitlist Form */}
-            <div className="bg-white border border-offwhite-soft rounded-sm p-10">
-              <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-4">
-                Join the Waitlist
-              </p>
-              <h3 className="font-display text-2xl text-forest font-semibold mb-2">
-                Be first to know when we open.
-              </h3>
-              <p className="text-charcoal-muted font-light text-sm leading-relaxed mb-3">
-                Drop your info below and we&apos;ll reach out when spots
-                become available.
-              </p>
-              <div className="bg-gold/10 border border-gold/30 rounded-sm px-4 py-3 mb-6">
-                <p className="text-forest text-sm font-medium">First 100 members lock in $10/month for life.</p>
-                <p className="text-charcoal-muted text-xs font-light mt-0.5">Regular price $20/month after founding spots fill.</p>
-              </div>
-              <CommunityWaitlistForm />
-            </div>
+            <p className="text-charcoal-muted font-light text-sm mb-10">
+              Cancel anytime.
+            </p>
+
+            <a
+              href={ACADEMY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-sm md:text-base tracking-wide px-8 py-5 bg-forest text-white hover:bg-forest-light transition-colors duration-200 font-semibold rounded-sm"
+            >
+              Join Serafim Handler Academy
+            </a>
+
+            <p className="text-charcoal-muted text-xs font-light mt-5 leading-relaxed">
+              Hosted on Circle. You&apos;ll get instant access to the
+              curriculum, library, and the next live Q&amp;A.
+            </p>
           </div>
         </div>
       </section>
