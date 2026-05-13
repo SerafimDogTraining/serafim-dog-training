@@ -172,8 +172,42 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* ── 4. Pricing ────────────────────────────────────────────── */}
-      <section className="bg-offwhite pb-24 md:pb-32">
+      {/* ── 4. Course Library ─────────────────────────────────────── */}
+      <section className="bg-forest py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-12 max-w-2xl">
+            <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-5">
+              Course Library
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl text-white font-medium leading-tight mb-4">
+              Here&apos;s what&apos;s waiting for you inside.
+            </h2>
+            <p className="text-white/70 font-light text-lg leading-relaxed">
+              Structured tracks built to take you from foundation work all the
+              way to advanced reliability — puppy to working dog, basics to
+              service dog standards.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-white/5">
+              <Image
+                src="/images/community-courses-preview.png"
+                alt="Screenshot of the Serafim Handler Academy course library showing courses for Training Basics, Foundations, Puppy Training, Socialization, Behavioral Challenges, Tools & Leashes, Corrections, Real World Application, Advanced Obedience, Luring/Shaping/Targeting, High Drive & Working Dog, and Service Dog"
+                width={1204}
+                height={907}
+                unoptimized
+                className="w-full h-auto block"
+                sizes="(max-width: 1200px) 100vw, 1152px"
+              />
+            </div>
+            <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. Pricing ────────────────────────────────────────────── */}
+      <section className="bg-offwhite py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-6">
           <div className="bg-white border border-offwhite-soft rounded-sm p-10 md:p-14 text-center">
             <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
