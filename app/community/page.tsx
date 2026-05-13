@@ -134,6 +134,17 @@ export default function CommunityPage() {
               you&apos;re ready to put in the work, this is where it happens.
             </p>
           </div>
+
+          <div className="mt-12">
+            <a
+              href={ACADEMY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm tracking-wide px-8 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold rounded-sm"
+            >
+              Join the Academy
+            </a>
+          </div>
         </div>
       </section>
 
@@ -169,6 +180,17 @@ export default function CommunityPage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-14">
+            <a
+              href={ACADEMY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm tracking-wide px-8 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold rounded-sm"
+            >
+              Join the Academy
+            </a>
+          </div>
         </div>
       </section>
 
@@ -202,6 +224,17 @@ export default function CommunityPage() {
               />
             </div>
             <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+          </div>
+
+          <div className="mt-14">
+            <a
+              href={ACADEMY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm tracking-wide px-8 py-4 bg-gold text-forest hover:bg-gold-light transition-colors duration-200 font-semibold rounded-sm"
+            >
+              Join the Academy
+            </a>
           </div>
         </div>
       </section>
