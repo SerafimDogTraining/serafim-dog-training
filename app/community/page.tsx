@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-const ACADEMY_URL = "https://serafim-handler-academy.circle.so";
+const ACADEMY_URL = "https://serafim-handler-academy.circle.so/checkout/community-member";
 
 const whoBullets = [
   "You want to train your dog at your own pace — not lock into someone else's calendar.",
