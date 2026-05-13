@@ -84,8 +84,8 @@ export default function CommunityPage() {
             <div className="order-1 md:order-2 relative">
               <div className="relative overflow-hidden rounded-sm aspect-[4/5] md:aspect-[4/5] shadow-2xl">
                 <Image
-                  src="/images/community-hero.jpg"
-                  alt="Arthur Serafim training a dog"
+                  src="/images/img_2102.jpg"
+                  alt="Arthur Serafim with a puppy at Home Depot"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
