@@ -189,7 +189,7 @@ export default function HandlerProgramPage() {
                   Pricing
                 </p>
                 <p className="font-display text-4xl text-white font-medium mb-1">
-                  $3,500
+                  $3,200
                 </p>
                 <p className="text-white/50 text-sm mb-8 font-light">
                   Payment plans available

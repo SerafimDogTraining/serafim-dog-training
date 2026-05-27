@@ -144,7 +144,7 @@ export default function BehavioralCorrectionPage() {
                   Pricing
                 </p>
                 <p className="font-display text-4xl text-white font-medium mb-2">
-                  $2,000
+                  $1,600
                 </p>
                 <p className="text-white/50 text-sm font-light mb-2">Payment plans available</p>
                 <p className="text-white/60 font-light text-sm mb-8">

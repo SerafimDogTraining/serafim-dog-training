@@ -97,9 +97,9 @@ The post will automatically appear in the blog index and get its own page at `/b
 
 Displayed on the site (informational — payment is collected after the consult, not on the website):
 
-- **Structured Dog Package** — $999 (3 sessions)
-- **Behavioral Correction** — $2,000 (6 sessions)
-- **The Handler Program** — $3,500 (12 sessions)
+- **Structured Dog Package** — $800 (3 sessions)
+- **Behavioral Correction** — $1,600 (6 sessions)
+- **The Handler Program** — $3,200 (12 sessions)
 - **Service Dog Program** — starts at $1,499 (custom)
 
 To update prices, edit `app/page.tsx` (offers array) and the matching `app/programs/<program>/page.tsx`.
