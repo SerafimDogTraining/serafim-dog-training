@@ -4,6 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "You're on the List | Serafim Dog Training",
   description: "You've reserved your founding spot in the Serafim Dog Training community.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function CommunityThankYouPage() {
