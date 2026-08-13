@@ -92,15 +92,11 @@ export default function OffLeashForm() {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full sm:w-[300px] sm:mx-auto sm:block text-sm tracking-[0.14em] font-semibold uppercase px-6 py-4 bg-[#B0883B] text-[#16352B] rounded-sm hover:bg-[#c39c4b] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full text-sm tracking-[0.14em] font-semibold uppercase px-6 py-4 bg-[#B0883B] text-white rounded-sm hover:bg-[#c39c4b] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {submitting ? "Sending…" : "Send Me the Playbook"}
+          {submitting ? "Sending…" : "Send me the playbook"}
         </button>
       </div>
-
-      <p className="text-xs text-[#16352B]/60 text-center font-light pt-1">
-        Free instant download. No spam.
-      </p>
     </form>
   );
 }
