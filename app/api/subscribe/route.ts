@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const MAILERLITE_GROUP_ID = "185771829837694751";
+const MAILERLITE_GROUP_ID = "195700746542385129"; // Off-Leash Reliability Playbook group
 const MAILERLITE_API = "https://connect.mailerlite.com/api";
 
 // Set MAILERLITE_API_KEY in Vercel environment variables.
