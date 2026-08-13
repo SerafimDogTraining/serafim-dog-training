@@ -52,6 +52,7 @@ export default function Header() {
   const isHeroPage = pathname === "/";
 
   if (pathname?.startsWith("/playbook")) return null;
+  if (pathname?.startsWith("/off-leash-guide")) return null;
 
   return (
     <header

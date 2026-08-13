@@ -58,6 +58,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   if (pathname?.startsWith("/playbook")) return null;
+  if (pathname?.startsWith("/off-leash-guide")) return null;
 
   return (
     <footer className="bg-forest text-white">
