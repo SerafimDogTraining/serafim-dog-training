@@ -22,7 +22,7 @@ export default function OffLeashForm() {
     setSubmitting(true);
 
     try {
-      const res = await fetch("/api/off-leash-guide/subscribe", {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ firstName, email }),

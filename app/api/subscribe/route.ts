@@ -13,9 +13,9 @@ export async function POST(request: Request) {
       email?: string;
     };
 
-    if (!email || !firstName || !lastName) {
+    if (!email || !firstName) {
       return NextResponse.json(
-        { error: "First name, last name, and email are required." },
+        { error: "First name and email are required." },
         { status: 400 }
       );
     }
@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         email,
-        fields: { name: firstName, last_name: lastName },
+        fields: { name: firstName, ...(lastName ? { last_name: lastName } : {}) },
         groups: [MAILERLITE_GROUP_ID],
       }),
     });
