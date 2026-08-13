@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 const bullets = [
-  "The 3 pillars every reliable off-leash dog is built on",
-  "Why most training plateaus (and how to fix it)",
-  "The 30-minute test that proves your dog is trained",
+  "The 3-pillar framework I use with every dog, from recall to full off-leash freedom",
+  "Why most dogs plateau — and the one shift that breaks through it",
+  "A simple 30-minute test to know if your dog is truly ready for off-leash freedom",
 ];
 
 function CheckIcon() {
@@ -43,17 +43,34 @@ export default function OffLeashGuidePage() {
 
       <div className="min-h-screen bg-[#F5F1E8] px-5 py-10 sm:py-14">
         <div className="w-full max-w-[600px] mx-auto text-center">
-          {/* Hero image */}
-          <div className="mx-auto mb-7 w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-[#B0883B]/40 shadow-[0_10px_30px_-12px_rgba(22,53,43,0.45)]">
+          <div
+            style={{
+              width: 120,
+              height: 120,
+              borderRadius: "50%",
+              overflow: "hidden",
+              border: "3px solid #B0883B",
+              margin: "0 auto 24px",
+            }}
+          >
             <Image
-              src="/images/korra-travel.jpg"
-              alt="Korra, service dog"
-              width={256}
-              height={256}
-              priority
-              className="w-full h-full object-cover"
+              src="/images/arthur-korra-summit-offleash.jpg"
+              alt="Arthur Serafim and Korra off-leash on a mountain"
+              width={120}
+              height={120}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center top",
+              }}
             />
           </div>
+
+          {/* Wordmark — plain text, not a link (page has no outbound nav) */}
+          <p className="text-sm sm:text-base uppercase tracking-[0.22em] font-semibold text-[#16352B] mb-8">
+            Serafim Dog Training
+          </p>
 
           <h1 className="font-display text-3xl sm:text-4xl font-semibold text-[#16352B] leading-[1.15] mb-4">
             The Off-Leash Reliability Playbook
