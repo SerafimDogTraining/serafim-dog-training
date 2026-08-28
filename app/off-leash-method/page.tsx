@@ -385,11 +385,12 @@ export default function OffLeashMethodPage() {
                 What It Is
               </p>
               <h2 className="font-display text-3xl font-medium leading-tight text-white sm:text-4xl">
-                Not another YouTube playlist. A system.
+                A structured system.
               </h2>
               <p className="mt-5 max-w-2xl text-base font-light leading-relaxed text-white/70 sm:text-lg">
-                Free content gives you tips. Tips do not build reliability.
-                The Off-Leash Method is a sequenced system. Every module
+                My free videos show you what is possible. This shows you how
+                to build it. The Off-Leash Method is a sequenced system. Every
+                module
                 depends on the one before it, so your dog is never asked for
                 something they have not been set up to give. It rests on three
                 pillars.
