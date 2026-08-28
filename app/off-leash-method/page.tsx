@@ -20,10 +20,13 @@ import {
 } from "./components/Icons";
 
 /* ------------------------------------------------------------------
-   CHECKOUT — swap these two before launch
+   CHECKOUT: swap these two before launch
    ------------------------------------------------------------------ */
 const CHECKOUT_URL = "#"; // TODO: swap with real Circle URL when ready
 const CHECKOUT_URL_PAYMENT_PLAN = "#"; // TODO: 3-payment plan URL
+
+// Proof video shown after the "What It Is" section. Swap this one value.
+const PROOF_VIDEO_ID = "dQw4w9WgXcQ"; // TODO: swap with real video ID
 
 const PRICE = 197;
 const PLAN_PAYMENT = 67;
@@ -31,12 +34,12 @@ const PLAN_PAYMENT = 67;
 export const metadata: Metadata = {
   title: "The Off-Leash Method | Serafim Dog Training",
   description:
-    "The complete training system for voice-only off-leash reliability — the same method used to train Korra. 22 core videos, 3 pillars, 30-day guarantee.",
+    "The complete training system for voice-only off-leash reliability, built on the same method used to train Korra. 22 core videos, 3 pillars, 30-day guarantee.",
   alternates: {
     canonical: "https://www.serafimdogtraining.com/off-leash-method",
   },
   openGraph: {
-    title: "The Off-Leash Method — Serafim Dog Training",
+    title: "The Off-Leash Method | Serafim Dog Training",
     description:
       "Finally. An off-leash dog you can trust. The complete system for voice-only off-leash reliability.",
     url: "https://www.serafimdogtraining.com/off-leash-method",
@@ -46,7 +49,7 @@ export const metadata: Metadata = {
 
 const HERO_IMAGE = "/images/arthur-korra-summit-offleash.jpg";
 // TODO: Arthur to provide a headshot at public/images/arthur-headshot.jpg.
-// Until the file exists we render a placeholder instead of a broken image —
+// Until the file exists we render a placeholder instead of a broken image,
 // drop the file in and it swaps itself on the next build.
 const ARTHUR_HEADSHOT = "/images/arthur-headshot.jpg";
 const hasHeadshot = existsSync(
@@ -56,11 +59,11 @@ const hasHeadshot = existsSync(
 const painPoints = [
   {
     title: "You call. She keeps running.",
-    body: "You watch your dog lock onto a squirrel, a jogger, another dog — and your voice stops existing. Every recall you have ever practiced evaporates in the one moment it actually matters.",
+    body: "You watch your dog lock onto a squirrel, a jogger, another dog, and your voice stops existing. Every recall you have ever practiced evaporates in the one moment it actually matters.",
   },
   {
     title: "The treats run out. The behavior goes with them.",
-    body: "Food-only training builds a dog who works when the pouch is on your hip. Off-leash, in the real world, there is nothing in your hand — and the dog knows it.",
+    body: "Food-only training builds a dog who works when the pouch is on your hip. Off-leash, in the real world, there is nothing in your hand, and the dog knows it.",
   },
   {
     title: "Commands break down under arousal.",
@@ -84,9 +87,9 @@ const pillars = [
     tagline:
       "Teaching the dog to be neutral to their environment through structured exposure.",
     intro:
-      "Before a dog can listen off-leash, the world has to stop being the most interesting thing in it. Neutrality is built deliberately — not by flooding your dog with distractions and hoping, but through structured exposure at distances and durations your dog can actually succeed at.",
+      "Before a dog can listen off-leash, the world has to stop being the most interesting thing in it. Neutrality is built deliberately, not by flooding your dog with distractions and hoping, but through structured exposure at distances and durations your dog can actually succeed at.",
     learn: [
-      "What neutrality actually is — and how it differs from suppression or shutting a dog down",
+      "What neutrality actually is, and how it differs from suppression or shutting a dog down",
       "How to build an exposure plan around your dog's real thresholds, not a generic checklist",
       "Reading arousal in real time so you know when to move closer and when to back off",
       "The common exposure mistakes that make reactivity worse instead of better",
@@ -98,13 +101,13 @@ const pillars = [
     name: "Safety Net",
     Icon: SafetyNetIcon,
     tagline:
-      "Long line + reliable recall + leave it — so bad behavior never gets rehearsed.",
+      "Long line, reliable recall, and leave it, so bad behavior never gets rehearsed.",
     intro:
       "Every time a dog blows off a recall and gets away with it, the behavior gets stronger. The safety net makes failure impossible to practice: a long line keeps the dog inside the boundary while recall and leave it are built to the point of reflex.",
     learn: [
-      "Long line handling — length, hardware, and mechanics that keep it a tool, not a tangle",
+      "Long line handling: length, hardware, and mechanics that keep it a tool, not a tangle",
       "Building a recall your dog answers under load, not just in the living room",
-      "Leave it as an off switch for pursuit — the command that prevents the worst-case outcome",
+      "Leave it as an off switch for pursuit, the command that prevents the worst-case outcome",
       "How to fade the line honestly, only when the dog has earned it",
     ],
   },
@@ -115,10 +118,10 @@ const pillars = [
     Icon: ReleaseIcon,
     tagline: "Teaching the dog to work through arousal and receive the release.",
     intro:
-      "Freedom is the paycheck. When the release becomes the reward, arousal stops being the enemy — the dog learns to hold it together, work through the pressure, and wait for you to open the door.",
+      "Freedom is the paycheck. When the release becomes the reward, arousal stops being the enemy. The dog learns to hold it together, work through the pressure, and wait for you to open the door.",
     learn: [
       "Conditioning a release word that carries real value to your dog",
-      "Work and reward cycles — structuring sessions so drive builds instead of leaking out",
+      "Work and reward cycles: structuring sessions so drive builds instead of leaking out",
       "Using the release to channel arousal into obedience rather than fighting it",
       "The 30-minute test: proving reliability before you trust it in the open",
     ],
@@ -211,16 +214,15 @@ const notForYou = [
 
 const testimonials = [1, 2, 3, 4, 5, 6];
 
-const bonuses = [
-  { name: "Emergency Recall Protocol PDF", value: 47 },
-  { name: "Reading Arousal State Guide PDF", value: 47 },
-  { name: "Complete Course Workbook", value: 37 },
-  { name: "30-Day Community Access", value: 97 },
-  { name: "1 Group Q&A Call (within 90 days)", value: 197 },
-  { name: "3 Bonus Videos", value: 67 },
+const includedItems = [
+  "22 core training videos",
+  "3 bonus videos: Learning Theory Explained, Family and Household Considerations, POV Real World Session with Korra",
+  "Emergency Recall Protocol PDF",
+  "Reading Arousal State Guide PDF",
+  "Complete Course Workbook",
+  "30 days of community access",
+  "1 group Q and A call within 90 days of purchase",
 ];
-
-const totalBonusValue = bonuses.reduce((sum, b) => sum + b.value, 0);
 
 const faqs: Faq[] = [
   {
@@ -237,7 +239,7 @@ const faqs: Faq[] = [
   },
   {
     q: "What if I've tried other training methods before?",
-    a: "Most people who find this course have already tried treats-only or recall training that broke down under distraction. This method builds reliability through structure — not just repetition.",
+    a: "Most people who find this course have already tried treats-only or recall training that broke down under distraction. This method builds reliability through structure, not just repetition.",
   },
   {
     q: "Is this balanced training?",
@@ -289,7 +291,7 @@ export default function OffLeashMethodPage() {
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-base font-light leading-relaxed text-white/75 sm:text-lg md:mx-0">
                 The complete training system for achieving voice-only off-leash
-                reliability — built on the same method I used to train Korra.
+                reliability, built on the same method I used to train Korra.
               </p>
 
               <div className="mt-9">
@@ -299,7 +301,7 @@ export default function OffLeashMethodPage() {
                   pulse
                   value={PRICE}
                 >
-                  Get The Off-Leash Method — ${PRICE}
+                  Get The Off-Leash Method for ${PRICE}
                 </BuyButton>
               </div>
 
@@ -333,7 +335,7 @@ export default function OffLeashMethodPage() {
                 You already know the feeling.
               </h2>
               <p className="mt-5 text-base font-light leading-relaxed text-[#16352B]/75 sm:text-lg">
-                The leash comes off and you stop being the handler — you become
+                The leash comes off and you stop being the handler. You become
                 a spectator. It is not that your dog does not love you. It is
                 that nothing in your training ever prepared either of you for
                 that moment.
@@ -388,8 +390,8 @@ export default function OffLeashMethodPage() {
               </h2>
               <p className="mt-5 max-w-2xl text-base font-light leading-relaxed text-white/70 sm:text-lg">
                 Free content gives you tips. Tips do not build reliability.
-                The Off-Leash Method is a sequenced system — every module
-                depends on the one before it — so your dog is never asked for
+                The Off-Leash Method is a sequenced system. Every module
+                depends on the one before it, so your dog is never asked for
                 something they have not been set up to give. It rests on three
                 pillars.
               </p>
@@ -416,38 +418,93 @@ export default function OffLeashMethodPage() {
           </div>
         </section>
 
-        {/* ---------------------------------------------- 4. MEET KORRA */}
+        {/* ---------------------------------------------- 4. PROOF VIDEO */}
         <section className="px-5 py-20 sm:px-6 sm:py-24">
-          <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div className="mx-auto max-w-3xl">
             <Reveal>
-              <div className="relative mx-auto w-full max-w-[420px] overflow-hidden rounded-sm border border-[#B0883B]/40">
-                <Image
-                  src={HERO_IMAGE}
-                  alt="Korra, a fully off-leash reliable service dog, on a mountain summit with Arthur"
-                  width={840}
-                  height={1120}
-                  sizes="(max-width: 768px) 90vw, 420px"
-                  className="h-auto w-full object-cover"
+              <div
+                className="relative w-full overflow-hidden rounded-sm border border-[#B0883B]/40 bg-[#16352B]"
+                style={{ aspectRatio: "16 / 9" }}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${PROOF_VIDEO_ID}`}
+                  title="The Off-Leash Method"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full border-0"
                 />
               </div>
-            </Reveal>
-
-            <Reveal delay={100}>
-              <SectionLabel>Meet Korra</SectionLabel>
-              <h2 className="font-display text-3xl font-medium leading-tight text-[#16352B] sm:text-4xl">
-                The proof is my own dog.
-              </h2>
-              <p className="mt-5 text-base font-light leading-relaxed text-[#16352B]/80 sm:text-lg">
-                I trained Korra using this exact method — starting from day one.
-                She&apos;s now a fully off-leash reliable service dog. What
-                you&apos;re buying isn&apos;t theory. It&apos;s the documented
-                result.
-              </p>
             </Reveal>
           </div>
         </section>
 
-        {/* ------------------------------------- 5. PILLARS — DEEP DIVE */}
+        {/* --------------------------------------- 5. ABOUT THE TRAINER */}
+        <section className="border-y border-[#16352B]/10 px-5 py-20 sm:px-6 sm:py-24">
+          <div className="mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-[auto_1fr] md:gap-12">
+            <Reveal>
+              <div className="relative mx-auto flex h-[200px] w-[200px] items-center justify-center overflow-hidden rounded-full border-[3px] border-[#B0883B] bg-[#16352B]/[0.06] sm:h-[220px] sm:w-[220px]">
+                {hasHeadshot ? (
+                  <Image
+                    src={ARTHUR_HEADSHOT}
+                    alt="Arthur Serafim, dog trainer in Austin, Texas"
+                    fill
+                    sizes="220px"
+                    className="object-cover"
+                  />
+                ) : (
+                  <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#16352B]/40">
+                    Headshot
+                  </span>
+                )}
+              </div>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <SectionLabel>About the Trainer</SectionLabel>
+              <h2 className="font-display text-3xl font-medium leading-tight text-[#16352B] sm:text-4xl">
+                Arthur Serafim
+              </h2>
+              <p className="mt-4 text-[13px] font-light tracking-wide text-[#16352B]/60">
+                Professional dog trainer. Austin, Texas.
+              </p>
+              <div className="mt-6 space-y-5 text-base font-light leading-relaxed text-[#16352B]/80">
+                <p>
+                  I didn&apos;t build this method from a textbook. I built it by
+                  studying the field, applying what actually works, and testing
+                  it on hundreds of dogs.
+                </p>
+                <p>
+                  The Off Leash Method draws from decades of research on canine
+                  behavior. The foundations of operant and classical
+                  conditioning that shaped modern training. The ethology work
+                  that taught us how dogs actually communicate and regulate
+                  themselves. The nervous system frameworks that changed how we
+                  understand what&apos;s really happening when a dog reacts or
+                  shuts down. This isn&apos;t one trainer&apos;s opinion.
+                  It&apos;s a synthesis of what the science shows and what real
+                  world training confirms.
+                </p>
+                <p>
+                  What I built on top of that is a system for handlers. Because
+                  most owners don&apos;t need more theory. They need a clear
+                  sequence, a way to read their own dog, and a framework for
+                  communicating with the animal in front of them. That&apos;s
+                  what this course is.
+                </p>
+                <p>
+                  I&apos;ve trained hundreds of client dogs across breeds,
+                  temperaments, and starting points, and 500,000 owners follow
+                  my content across YouTube, Instagram, TikTok, and Facebook.
+                  This course closes the gap between free content and what it
+                  actually takes to build reliability.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* -------------------------------------- 6. PILLARS DEEP DIVE */}
         <section className="border-y border-[#16352B]/10 px-5 py-20 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-3xl">
             <Reveal>
@@ -498,7 +555,7 @@ export default function OffLeashMethodPage() {
           </div>
         </section>
 
-        {/* ------------------------------------------- 6. MODULE LIST */}
+        {/* ------------------------------------------- 7. MODULE LIST */}
         <section className="px-5 py-20 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-3xl">
             <Reveal>
@@ -541,14 +598,14 @@ export default function OffLeashMethodPage() {
                   contentName="mid-page"
                   value={PRICE}
                 >
-                  Get Instant Access — ${PRICE}
+                  Get Instant Access for ${PRICE}
                 </BuyButton>
               </div>
             </Reveal>
           </div>
         </section>
 
-        {/* ------------------------------------- 7. FOR / NOT FOR */}
+        {/* ------------------------------------- 8. FOR / NOT FOR */}
         <section className="bg-[#16352B] px-5 py-20 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-4xl">
             <Reveal>
@@ -602,7 +659,7 @@ export default function OffLeashMethodPage() {
           </div>
         </section>
 
-        {/* ------------------------------------------ 8. TESTIMONIALS */}
+        {/* ------------------------------------------ 9. TESTIMONIALS */}
         <section className="px-5 py-20 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-5xl">
             <Reveal>
@@ -626,7 +683,7 @@ export default function OffLeashMethodPage() {
                           [RESULT HEADLINE]
                         </p>
                         <p className="mt-1 text-xs font-light tracking-wide text-[#16352B]/55">
-                          [NAME] — [DOG NAME]
+                          [NAME] · [DOG NAME]
                         </p>
                       </figcaption>
                     </div>
@@ -640,85 +697,33 @@ export default function OffLeashMethodPage() {
           </div>
         </section>
 
-        {/* ------------------------------------------- 9. ABOUT ARTHUR */}
-        <section className="border-y border-[#16352B]/10 px-5 py-20 sm:px-6 sm:py-24">
-          <div className="mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-[auto_1fr] md:gap-12">
-            <Reveal>
-              <div className="relative mx-auto flex h-[200px] w-[200px] items-center justify-center overflow-hidden rounded-full border-[3px] border-[#B0883B] bg-[#16352B]/[0.06] sm:h-[220px] sm:w-[220px]">
-                {hasHeadshot ? (
-                  <Image
-                    src={ARTHUR_HEADSHOT}
-                    alt="Arthur Serafim, dog trainer in Austin, Texas"
-                    fill
-                    sizes="220px"
-                    className="object-cover"
-                  />
-                ) : (
-                  <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-[#16352B]/40">
-                    Headshot
-                  </span>
-                )}
-              </div>
-            </Reveal>
-
-            <Reveal delay={100}>
-              <SectionLabel>About Arthur</SectionLabel>
-              <h2 className="font-display text-3xl font-medium leading-tight text-[#16352B] sm:text-4xl">
-                Arthur Serafim
-              </h2>
-              <p className="mt-4 text-[13px] font-light tracking-wide text-[#16352B]/60">
-                Professional dog trainer · Austin, TX · 500K+ followers across
-                YouTube, Instagram, TikTok, and Facebook
-              </p>
-              <p className="mt-6 text-base font-light leading-relaxed text-[#16352B]/80">
-                I didn&apos;t create this method from a textbook. I built it by
-                training hundreds of dogs and then proving it on my own.
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ------------------------------------------- 10. BONUS STACK */}
+        {/* --------------------------------------- 10. WHAT IS INCLUDED */}
         <section className="px-5 py-20 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-2xl">
             <Reveal>
               <SectionLabel>Everything Included</SectionLabel>
               <h2 className="font-display text-3xl font-medium leading-tight text-[#16352B] sm:text-4xl">
-                The bonuses stack up.
+                What comes with the course.
               </h2>
             </Reveal>
 
-            <div className="mt-10 divide-y divide-[#16352B]/10 border-y border-[#16352B]/10">
-              {bonuses.map((bonus, i) => (
-                <Reveal key={bonus.name} delay={Math.min(i, 5) * 70}>
-                  <div className="flex items-center gap-4 py-4">
-                    <CheckIcon className="h-5 w-5 shrink-0 text-[#B0883B]" />
-                    <span className="flex-1 text-[15px] font-light leading-snug text-[#16352B]">
-                      {bonus.name}
-                    </span>
-                    <span className="shrink-0 text-sm font-medium tracking-wide text-[#16352B]/55">
-                      ${bonus.value}
+            <ul className="mt-10 divide-y divide-[#16352B]/10 border-y border-[#16352B]/10">
+              {includedItems.map((item, i) => (
+                <Reveal key={item} as="li" delay={Math.min(i, 5) * 70}>
+                  <div className="flex items-start gap-4 py-4">
+                    <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#B0883B]" />
+                    <span className="flex-1 text-[15px] font-light leading-relaxed text-[#16352B]">
+                      {item}
                     </span>
                   </div>
                 </Reveal>
               ))}
-            </div>
+            </ul>
 
             <Reveal delay={80}>
-              <div className="mt-8 rounded-sm bg-[#16352B] p-7 text-center">
-                <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#B0883B]">
-                  Total Value
-                </p>
-                <p className="mt-2 font-display text-4xl font-medium text-white/60 line-through decoration-[#B0883B]/70 decoration-2">
-                  ${totalBonusValue}
-                </p>
-                <p className="mt-4 text-base font-light text-white/75">
-                  You get it all for
-                </p>
-                <p className="font-display text-5xl font-medium text-[#B0883B]">
-                  ${PRICE}
-                </p>
-              </div>
+              <p className="mt-9 text-center font-display text-2xl font-medium text-[#16352B] sm:text-3xl">
+                All included in the ${PRICE} price.
+              </p>
             </Reveal>
           </div>
         </section>
@@ -751,7 +756,7 @@ export default function OffLeashMethodPage() {
                   </p>
                   <p className="mt-3 text-[15px] font-light leading-relaxed text-white/65">
                     Full lifetime access to all {totalVideos} core videos, 3
-                    bonus videos, and every bonus in the stack.
+                    bonus videos, and everything else included.
                   </p>
                   <div className="mt-8">
                     <BuyButton
@@ -760,7 +765,7 @@ export default function OffLeashMethodPage() {
                       value={PRICE}
                       fullWidth
                     >
-                      Buy Now — ${PRICE}
+                      Buy Now for ${PRICE}
                     </BuyButton>
                   </div>
                 </div>
@@ -851,7 +856,7 @@ export default function OffLeashMethodPage() {
                   value={PRICE}
                   className="sm:px-12 sm:py-5 sm:text-base"
                 >
-                  Get The Off-Leash Method — ${PRICE}
+                  Get The Off-Leash Method for ${PRICE}
                 </BuyButton>
               </div>
 
