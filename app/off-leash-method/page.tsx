@@ -84,10 +84,9 @@ const pillars = [
     number: "01",
     name: "Neutrality",
     Icon: NeutralityIcon,
-    tagline:
-      "Teaching the dog to be neutral to their environment through structured exposure.",
+    tagline: "Your dog's relationship with the environment.",
     intro:
-      "Before a dog can listen off-leash, the world has to stop being the most interesting thing in it. Neutrality is built deliberately, not by flooding your dog with distractions and hoping, but through structured exposure at distances and durations your dog can actually succeed at.",
+      "Before a dog can listen off leash, the world has to stop being the most interesting thing in it. Neutrality is built deliberately, not by flooding your dog with distractions and hoping, but through structured exposure at distances and durations your dog can actually succeed at.",
     learn: [
       "What neutrality actually is, and how it differs from suppression or shutting a dog down",
       "How to build an exposure plan around your dog's real thresholds, not a generic checklist",
@@ -96,34 +95,34 @@ const pillars = [
     ],
   },
   {
-    id: "safety-net",
+    id: "engagement",
     number: "02",
-    name: "Safety Net",
+    name: "Engagement",
     Icon: SafetyNetIcon,
-    tagline:
-      "Long line, reliable recall, and leave it, so bad behavior never gets rehearsed.",
+    tagline: "Your dog's relationship with you.",
     intro:
-      "Every time a dog blows off a recall and gets away with it, the behavior gets stronger. The safety net makes failure impossible to practice: a long line keeps the dog inside the boundary while recall and leave it are built to the point of reflex.",
+      "Reliability off leash depends on your dog wanting to work with you, not just complying because they have to. Engagement is the willingness to check in, the desire to be part of the moment, and the recall that answers because your dog wants to be with you.",
     learn: [
-      "Long line handling: length, hardware, and mechanics that keep it a tool, not a tangle",
       "Building a recall your dog answers under load, not just in the living room",
-      "Leave it as an off switch for pursuit, the command that prevents the worst-case outcome",
-      "How to fade the line honestly, only when the dog has earned it",
+      "Creating genuine value in yourself so the environment stops winning by default",
+      "Teaching your dog to voluntarily check in and re orient to you",
+      "What handler presence actually looks like, and why most owners underdeliver it",
     ],
   },
   {
-    id: "conditioned-release",
+    id: "reinforcement",
     number: "03",
-    name: "Conditioned Release",
+    name: "Reinforcement",
     Icon: ReleaseIcon,
-    tagline: "Teaching the dog to work through arousal and receive the release.",
+    tagline: "How your dog learns what works.",
     intro:
-      "Freedom is the paycheck. When the release becomes the reward, arousal stops being the enemy. The dog learns to hold it together, work through the pressure, and wait for you to open the door.",
+      "The mechanics of training. Marker systems, timing, clear communication, appropriate reward, and honest correction when needed. This is where behaviorism becomes practical, and where the safety net (long line, leave it) and the conditioned release live as tools inside a bigger system.",
     learn: [
+      "Marker word conditioning and precise timing",
+      "Long line handling, length, hardware, and mechanics that keep it a tool, not a tangle",
+      "Leave it as an off switch for pursuit, the command that prevents the worst case outcome",
       "Conditioning a release word that carries real value to your dog",
-      "Work and reward cycles: structuring sessions so drive builds instead of leaking out",
-      "Using the release to channel arousal into obedience rather than fighting it",
-      "The 30-minute test: proving reliability before you trust it in the open",
+      "How to fade the line honestly, only when the dog has earned it",
     ],
   },
 ];
@@ -529,7 +528,11 @@ export default function OffLeashMethodPage() {
                     </div>
                   </div>
 
-                  <p className="mt-6 text-[15px] font-light leading-relaxed text-[#16352B]/80 sm:text-base">
+                  <p className="mt-5 font-display text-xl font-medium leading-snug text-[#16352B]/75 sm:text-2xl">
+                    {pillar.tagline}
+                  </p>
+
+                  <p className="mt-4 text-[15px] font-light leading-relaxed text-[#16352B]/80 sm:text-base">
                     {pillar.intro}
                   </p>
 
