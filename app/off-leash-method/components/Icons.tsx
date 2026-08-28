@@ -97,6 +97,44 @@ export function ReleaseIcon({ className = "" }: IconProps) {
   );
 }
 
+/** Pillar 2 — Engagement: two rings locked together, handler and dog */
+export function EngagementIcon({ className = "" }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 40 40"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="15" cy="20" r="8.5" />
+      <circle cx="25" cy="20" r="8.5" />
+    </svg>
+  );
+}
+
+/** Pillar 3 — Reinforcement: a marker signal, timed to the exact moment */
+export function ReinforcementIcon({ className = "" }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 40 40"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <polyline points="5 27 13 27 20 13 27 27 35 27" />
+      <circle cx="20" cy="13" r="2.5" />
+    </svg>
+  );
+}
+
 export function GuaranteeIcon({ className = "" }: IconProps) {
   return (
     <svg

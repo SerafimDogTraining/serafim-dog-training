@@ -13,10 +13,10 @@ import ScrollDepthTracker from "./components/ScrollDepthTracker";
 import {
   CheckIcon,
   CrossIcon,
+  EngagementIcon,
   GuaranteeIcon,
   NeutralityIcon,
-  ReleaseIcon,
-  SafetyNetIcon,
+  ReinforcementIcon,
 } from "./components/Icons";
 
 /* ------------------------------------------------------------------
@@ -98,7 +98,7 @@ const pillars = [
     id: "engagement",
     number: "02",
     name: "Engagement",
-    Icon: SafetyNetIcon,
+    Icon: EngagementIcon,
     tagline: "Your dog's relationship with you.",
     intro:
       "Reliability off leash depends on your dog wanting to work with you, not just complying because they have to. Engagement is the willingness to check in, the desire to be part of the moment, and the recall that answers because your dog wants to be with you.",
@@ -113,7 +113,7 @@ const pillars = [
     id: "reinforcement",
     number: "03",
     name: "Reinforcement",
-    Icon: ReleaseIcon,
+    Icon: ReinforcementIcon,
     tagline: "How your dog learns what works.",
     intro:
       "The mechanics of training. Marker systems, timing, clear communication, appropriate reward, and honest correction when needed. This is where behaviorism becomes practical, and where the safety net (long line, leave it) and the conditioned release live as tools inside a bigger system.",
