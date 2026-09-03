@@ -22,7 +22,7 @@ import {
 /* ------------------------------------------------------------------
    CHECKOUT: swap these two before launch
    ------------------------------------------------------------------ */
-const CHECKOUT_URL = "#"; // TODO: swap with real Circle URL when ready
+const CHECKOUT_URL = "https://serafim-handler-academy.circle.so/checkout/off-leash-method";
 const CHECKOUT_URL_PAYMENT_PLAN = "#"; // TODO: 3-payment plan URL
 
 // Proof video shown after the "What It Is" section. Swap this one value.
