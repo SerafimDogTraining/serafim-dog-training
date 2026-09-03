@@ -42,11 +42,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // The font variables must live on <html>, not <body>: globals.css maps
+  // --font-sans/--font-display to them inside @theme, which Tailwind emits at
+  // :root. Defined any lower and those var() lookups resolve to nothing, and
+  // every heading silently falls back to the default sans stack.
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-offwhite text-charcoal`}
-      >
+    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+      <body className="font-sans antialiased bg-offwhite text-charcoal">
         <Header />
         <main>{children}</main>
         <Footer />
