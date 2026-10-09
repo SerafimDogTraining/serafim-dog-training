@@ -68,8 +68,8 @@ export default function HeroSection() {
         <div className="border-t border-b border-white/20 py-5 mt-12 md:mt-16">
           <div className="flex flex-wrap justify-center md:justify-around gap-8 md:gap-0 text-white/90">
             {[
-              { stat: "150M+", label: "Views Across Platforms" },
-              { stat: "100+", label: "Dogs Trained" },
+              { stat: "1B+", label: "Views Across Platforms" },
+              { stat: "Hundreds", label: "of Dogs Trained" },
               { stat: "600K+", label: "Followers Across Platforms" },
             ].map((item) => (
               <div key={item.stat} className="text-center">
