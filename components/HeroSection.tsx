@@ -65,7 +65,7 @@ export default function HeroSection() {
               {[
                 { stat: "150M+", label: "Views Across Platforms" },
                 { stat: "100+", label: "Dogs Trained" },
-                { stat: "200K+", label: "Followers Across Platforms" },
+                { stat: "600K+", label: "Followers Across Platforms" },
               ].map((item) => (
                 <div key={item.stat} className="text-center">
                   <div className="font-display text-2xl font-semibold">{item.stat}</div>
