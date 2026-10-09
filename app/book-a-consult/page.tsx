@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Book a Free Consult",
@@ -25,17 +26,34 @@ export default function BookAConsultPage() {
       {/* Header */}
       <section className="bg-forest pt-40 pb-16">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
-            Free 15-Min Call
-          </p>
-          <h1 className="font-display text-5xl md:text-6xl text-white font-medium leading-tight max-w-2xl mb-6">
-            Let&apos;s talk about your dog.
-          </h1>
-          <p className="text-white/70 font-light text-lg max-w-xl leading-relaxed">
-            15 minutes. Free. No sales pitch. You tell us about your dog,
-            we&apos;ll tell you honestly whether we&apos;re the right fit and
-            what the path forward looks like.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div className="order-2 md:order-1">
+              <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
+                Free 15-Min Call
+              </p>
+              <h1 className="font-display text-5xl md:text-6xl text-white font-medium leading-tight mb-6">
+                Let&apos;s talk about your dog.
+              </h1>
+              <p className="text-white/70 font-light text-lg leading-relaxed">
+                15 minutes. Free. No sales pitch. You tell us about your dog,
+                we&apos;ll tell you honestly whether we&apos;re the right fit and
+                what the path forward looks like.
+              </p>
+            </div>
+            <div className="order-1 md:order-2 relative">
+              <div className="relative overflow-hidden rounded-sm aspect-[4/5] shadow-2xl">
+                <Image
+                  src="/images/arthur-korra-hero.jpg"
+                  alt="Arthur Serafim with Korra"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+            </div>
+          </div>
         </div>
       </section>
 
