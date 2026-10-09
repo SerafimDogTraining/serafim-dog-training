@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 
 export const metadata: Metadata = {
   title: "Austin Dog Trainer | Service Dog Training | Serafim Dog Training",
@@ -90,33 +91,45 @@ const painPoints = [
 
 const testimonials = [
   {
-    name: "Becky Reece",
-    breed: "Golden Retriever",
-    tag: "Therapy Dog · Deep Pressure Therapy",
+    name: "Rebecca Reese",
+    initials: "RR",
     quote:
-      "I needed my golden trained for Deep Pressure Therapy for my dad, as well as for hospital and home visits as a therapy dog. Arthur built a program around both. She now performs DPT on command and does regular visits to my dad's hospital and home. The training was thorough, the results are real.",
-    initials: "BR",
+      "Arthur has trained a couple of my dogs! He is fantastic. Super good with the dogs and patient with me. I am so impressed with how well my dogs behave now, and how happy they are. You can not go wrong working with him.",
   },
   {
-    name: "Sophie Gillet",
-    breed: "Miniature Goldendoodle",
-    tag: "Service Dog · Public Access Training",
+    name: "Milo Bonebrake",
+    initials: "MB",
     quote:
-      "Training a service dog felt overwhelming until I found Arthur. He broke everything down — foundation, public access, real-world scenarios. My goldendoodle is now fully task trained and handles every environment with complete confidence — including air travel. The public access work Arthur put in is real.",
-    initials: "SG",
+      "I loved training with Serafim Dog Training. From our first evaluation phone call to going over everything, I felt constantly supported. He met me where I was, and he was truly great with my dog. I would recommend him to anyone.",
   },
   {
-    name: "Brandon N.",
-    breed: "Belgian Malinois",
-    tag: "Behavioral Rehab · Bite Work · Scent Work",
+    name: "Jaz Martinez",
+    initials: "JM",
     quote:
-      "My Malinois was reactive and I didn't understand why. Arthur didn't try to suppress the behavior — he helped me see what my dog actually needed. He needed a job. Arthur channeled everything into bite work and scent work. He's a completely different dog. We both have a purpose now.",
+      "The transformation in my dog Bullet has been incredible, but what impressed me most was that the training wasn't just for my dog, it was for me as an owner too. He taught me how to communicate effectively and build a relationship based on trust. If you want a trainer who invests in both the dog and the owner, this is the person to call.",
+  },
+  {
+    name: "Brayden Nelson",
     initials: "BN",
+    quote:
+      "Arthur helped me work with my Belgian Malinois, a very reactive and aggressive rescue. My dog wasn't properly socialized and desperately needed proper training before cementing bad habits. The progress has been incredible.",
+  },
+  {
+    name: "Ethan Bognar",
+    initials: "EB",
+    quote:
+      "He is very respectful and has helped me teach my dog a lot. She has learned four new commands in just a week. I was a little worried since it was virtual but it went great, he even demonstrated using his own dog so it was easy to see what to do.",
+  },
+  {
+    name: "Shelly Vincent",
+    initials: "SV",
+    quote:
+      "I used a couple of trainers for my puppy and was reluctant to do it virtually, but the guidance Serafim has given me has been great. My dog is developing quickly with the behaviors we want. I will continue to use him.",
   },
 ];
 
 const trustBadges = [
-  { stat: "100+", label: "Dogs Trained" },
+  { stat: "Hundreds", label: "of Dogs Trained" },
   { stat: "Expert", label: "Service Dog Training" },
   { stat: "In-Person + Online", label: "Austin & Worldwide" },
   { stat: "Custom", label: "Training Plans" },
@@ -379,42 +392,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="flex flex-col p-8 bg-offwhite border border-offwhite-soft rounded-sm"
-              >
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-gold fill-gold" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-
-                <blockquote className="text-charcoal-light font-light leading-relaxed text-[0.9375rem] italic flex-1 mb-7">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-forest flex items-center justify-center shrink-0">
-                    <span className="text-white text-xs font-semibold">{t.initials}</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-charcoal">{t.name}</p>
-                    <p className="text-xs text-charcoal-muted font-light">{t.breed}</p>
-                  </div>
-                </div>
-
-                <div className="mt-5 pt-5 border-t border-offwhite-soft">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-medium">
-                    {t.tag}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewsCarousel reviews={testimonials} />
         </div>
       </section>
 
