@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import WinsCarousel from "@/components/WinsCarousel";
 
 export const metadata: Metadata = {
   title: "Serafim Handler Academy — Train Your Dog Alongside Me",
@@ -23,18 +24,27 @@ const GOLD_BTN =
 const wins = [
   {
     quote:
+      "I was so proud of Lucky when he settled with another dog nearby. His threshold keeps improving and he checks in with me more. Reactivity is no easy thing, but we're moving step by step and getting better every day.",
+    name: "Giona Young",
+    detail: "Lucky, 6 years old",
+  },
+  {
+    quote:
+      "A couple weeks ago Kobe wouldn't even give me eye contact. Now I can hold him in a down with the neighbor's dog barking, and walk out of his sight before releasing him. Slowly but surely, we'll get there.",
+    name: "Kris & Kobe",
+    detail: "Kobe, Goldendoodle, 3 years old",
+  },
+  {
+    quote:
+      "Bruno and I working off-leash during our play session. For a dog who used to bark and lunge at every dog in sight, moments like these mean everything. Still a work in progress, but we're getting there.",
+    name: "Chang Li",
+    detail: "Bruno",
+  },
+  {
+    quote:
       "I took Layla for a walk at the mall and she did really well. I almost cried.",
     name: "Angel",
-  },
-  {
-    quote:
-      "Kobe wouldn't even give me eye contact. Never did I think we would get here.",
-    name: "Kris & Kobe",
-  },
-  {
-    quote:
-      "My dog used to bark and lunge at every dog in sight. Moments like these mean everything.",
-    name: "Chang L.",
+    detail: "Layla",
   },
 ];
 
@@ -211,18 +221,7 @@ export default function CommunityPage() {
               These are the moments members share inside the Academy.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {wins.map((w) => (
-              <div key={w.name} className="border-t-2 border-gold pt-7">
-                <p className="font-display text-2xl text-forest font-light italic leading-snug">
-                  &ldquo;{w.quote}&rdquo;
-                </p>
-                <p className="text-gold font-semibold tracking-wide text-sm mt-5">
-                  {w.name}
-                </p>
-              </div>
-            ))}
-          </div>
+          <WinsCarousel wins={wins} />
           <div className="text-center mt-14">
             <a
               href={ACADEMY_URL}
