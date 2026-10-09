@@ -26,7 +26,7 @@ export default function WinsCarousel({ wins }: { wins: Win[] }) {
           <div
             key={i}
             data-card
-            className="snap-start shrink-0 basis-full md:basis-[calc((100%_-_3rem)/3)]"
+            className="snap-start shrink-0 basis-full md:basis-[calc(33.333%_-_1rem)]"
           >
             <div className="bg-white border border-offwhite-soft rounded-sm p-8 h-full flex flex-col justify-center text-center min-h-[20rem]">
               <p className="font-display text-xl md:text-2xl text-forest font-light italic leading-snug">
