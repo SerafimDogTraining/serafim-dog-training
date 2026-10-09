@@ -5,12 +5,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Arthur Serafim | Austin Dog Trainer & Service Dog Specialist",
   description:
-    "Meet Arthur Serafim — Austin-based dog trainer and handler who trained Korra as a service dog. 100+ dogs trained, 7M+ views.",
+    "Meet Arthur Serafim — Austin-based dog trainer and handler who trained Korra as a service dog. hundreds of dogs trained, 1B+ views.",
   alternates: { canonical: "https://www.serafimdogtraining.com/about" },
   openGraph: {
     title: "About Arthur Serafim | Austin Dog Trainer & Service Dog Specialist",
     description:
-      "Meet Arthur Serafim — Austin-based dog trainer and handler who trained Korra as a service dog. 100+ dogs trained, 7M+ views.",
+      "Meet Arthur Serafim — Austin-based dog trainer and handler who trained Korra as a service dog. hundreds of dogs trained, 1B+ views.",
     url: "https://www.serafimdogtraining.com/about",
   },
 };
