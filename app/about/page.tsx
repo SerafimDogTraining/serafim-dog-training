@@ -37,17 +37,34 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-forest pt-40 pb-24">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
-            About
-          </p>
-          <h1 className="font-display text-5xl md:text-6xl text-white font-medium leading-tight max-w-2xl mb-7">
-            The Truth About Dog Training:{" "}
-            <em className="italic font-light">It&apos;s Not About the Dog.</em>
-          </h1>
-          <p className="text-white/70 font-light text-lg max-w-xl leading-relaxed">
-            I started training dogs in 2020 and built my practice through
-            results. Based in Austin, TX. Working with clients worldwide.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div className="order-2 md:order-1">
+              <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-6">
+                About
+              </p>
+              <h1 className="font-display text-5xl md:text-6xl text-white font-medium leading-tight mb-7">
+                The Truth About Dog Training:{" "}
+                <em className="italic font-light">It&apos;s Not About the Dog.</em>
+              </h1>
+              <p className="text-white/70 font-light text-lg leading-relaxed">
+                I started training dogs in 2020 and built my practice through
+                results. Based in Austin, TX. Working with clients worldwide.
+              </p>
+            </div>
+            <div className="order-1 md:order-2 relative">
+              <div className="relative overflow-hidden rounded-sm aspect-[4/5] shadow-2xl">
+                <Image
+                  src="/images/arthur-about.jpg"
+                  alt="Arthur Serafim, Austin dog trainer"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-16 h-16 border-r-4 border-b-4 border-gold" />
+            </div>
+          </div>
         </div>
       </section>
 
