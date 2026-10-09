@@ -42,6 +42,18 @@ const wins = [
   },
   {
     quote:
+      "Big win today. Sapphire normally lunges at dogs and cats out of excitement. On a potty break I put her in a sit and dropped her leash. She saw a cat and started barking, but never moved from her spot. A great response and even better obedience.",
+    name: "Camron Ciggs",
+    detail: "Sapphire",
+  },
+  {
+    quote:
+      "I took Bodhi out before bed and my neighbor walked right past us. I put Bodhi in a sit and he didn't make a sound. He sat, watched, and stayed quiet. I'll take that as a win.",
+    name: "Alyssa Pflughaupt",
+    detail: "Bodhi",
+  },
+  {
+    quote:
       "I took Layla for a walk at the mall and she did really well. I almost cried.",
     name: "Angel",
     detail: "Layla",
