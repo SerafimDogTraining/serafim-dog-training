@@ -219,6 +219,42 @@ export default function CommunityPage() {
         </div>
       </section>
 
+      {/* 1b. Video */}
+      <section className="bg-forest-dark py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <p className="text-gold text-xs uppercase tracking-[0.28em] font-medium mb-4">
+              Watch this first
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl text-white font-medium leading-tight">
+              See what training alongside me looks like.
+            </h2>
+          </div>
+          <div
+            className="relative w-full overflow-hidden rounded-sm shadow-2xl border border-white/10"
+            style={{ aspectRatio: "16 / 9" }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/1238449103?autoplay=1&muted=1&loop=1&autopause=0&title=0&byline=0&portrait=0"
+              className="absolute inset-0 w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Serafim Handler Academy"
+            />
+          </div>
+          <div className="text-center mt-8">
+            <a
+              href={ACADEMY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={GOLD_BTN}
+            >
+              Join the Academy
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Real Wins */}
       <section className="bg-offwhite py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-6">
@@ -409,9 +445,9 @@ export default function CommunityPage() {
             For handlers ready to do the work.
           </h2>
           <p className="text-charcoal-light font-light text-lg leading-relaxed mb-10">
-            Whether you&apos;re starting with a puppy, fixing real problems in an
-            adult dog, or building toward service or working-level reliability,
-            this is the room for you.
+            Whether you&apos;re starting with a puppy, fixing real problems in
+            an adult dog, or building toward service or working-level
+            reliability, this is the room for you.
           </p>
           <ul className="space-y-5 mb-12">
             {whoBullets.map((line) => (
